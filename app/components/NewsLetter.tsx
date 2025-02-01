@@ -76,9 +76,9 @@ export default function NewsLetter() {
                 </div>
             </motion.div>
 
-            <div className="flex flex-col lg:flex-row items-center justify-center mx-6 lg:mx-20 mb-16 newsletter-content">
+            <div className="flex flex-col items-center lg:flex-row justify-center mx-6 lg:mx-20 mb-16 newsletter-content">
                 {/* Image Section */}
-                <div className="flex-[6] p-2 relative overflow-hidden lg:ml-12 ml-12 newsletter-image">
+                <div className="flex-[6] p-2 relative overflow-hidden mb-8 lg:mb-0 lg:ml-12 mx-12 newsletter-image">
                     <img
                         src="/images/new (1).png"
                         alt="Newsletter Illustration"
@@ -88,43 +88,36 @@ export default function NewsLetter() {
                 </div>
 
                 {/* Text and Form Section */}
-                <div className="flex-[12] mr-28 bg-green-100 rounded-3xl shadow-md newsletter-text">
-                    <div className="px-5 py-5">
-                        <div className="px-4">
-                            <h1 className="text-2xl font-semibold mb-2 sm:pr-28 sm:mr-20 text-center sm:text-left">
-                                One newsletter, straight from me to you. Countless breakthroughs. Join now for expert insights and updates!
-                            </h1>
-                            <p className="text-base text-gray-700 mb-4 sm:pr-24 sm:mr-28 text-center sm:text-left">
-                                Weekly tips and strategies to boost your confidence, refine your skills, and find balance. Your growth journey starts here, don&#39;t miss out!
-                            </p>
-                        </div>
-                        <div className="flex flex-col items-center sm:items-start space-y-3 pt-10 sm:pt-20">
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="name@email.com"
-                                className="w-full p-2 px-5 rounded-full border border-gray-300 focus:outline-none py-3 newsletter-input"
-                            />
-                            <button
-                                className={`w-full bg-green-200 text-black py-2 px-5 rounded-full text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""
-                                    } newsletter-button`}
-                                onClick={handleSubscribe}
-                                disabled={loading}
-                            >
-                                {loading ? <Loader2 className="animate-spin" /> : "Subscribe to Newsletter"}
-                            </button>
-                            {/* {message && (
-                                <p className="text-center text-sm text-gray-700 mt-4">
-                                    {message}
-                                </p>
-                            )} */}
-                        </div>
+                <div className="flex-[12] bg-green-100 rounded-3xl shadow-md newsletter-text p-5 mx-6 lg:mx-0 lg:mr-28">
+                    <div className="px-4">
+                        <h1 className="text-2xl font-semibold mb-2 sm:pr-28 sm:mr-20 text-center sm:text-left">
+                            One newsletter, straight from me to you. Countless breakthroughs. Join now for expert insights and updates!
+                        </h1>
+                        <p className="text-base text-gray-700 mb-4 mr-10 sm:pr-24 sm:mr-28 text-center sm:text-left lg:mr-32">
+                            Weekly tips and strategies to boost your confidence, refine your skills, and find balance. Your growth journey starts here, don&#39;t miss out!
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col items-center sm:items-start space-y-3 pt-10 sm:pt-20">
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="name@email.com"
+                            className="w-full p-2 px-5 rounded-full border border-gray-300 focus:outline-none py-3 newsletter-input"
+                        />
+                        <button
+                            className={`w-full bg-green-200 text-black py-2 px-5 rounded-full text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""} newsletter-button`}
+                            onClick={handleSubscribe}
+                            disabled={loading}
+                        >
+                            {loading ? <Loader2 className="animate-spin" /> : "Subscribe to Newsletter"}
+                        </button>
                     </div>
                 </div>
             </div>
 
-            {/* Popup Notification */}
+            {/* Popup Notification (Unchanged as per request) */}
             {showPopup && (
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -150,15 +143,6 @@ export default function NewsLetter() {
                                     Thank you! You're now part of the growth journey.
                                 </p>
                                 <p className="text-gray-600">Stay tuned for insights and updates.</p>
-
-                                {/* Confetti Simulation */}
-                                {/* <motion.div
-                                    className="absolute top-0 -left-10 w-full"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                >
-                                    🎉✨💥🎊
-                                </motion.div> */}
                             </motion.div>
                         ) : (
                             <motion.div className="flex flex-col items-center justify-center text-center">
