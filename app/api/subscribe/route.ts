@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
         const API_KEY = '1ac5b33efd5594eddbdc1ed0e8d591d1-us12';
         const LIST_ID = 'a72630b20e';
-        const DATACENTER = API_KEY.split('-')[1]; 
+        const DATACENTER = API_KEY.split('-')[1];
 
         const url = `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}/members`;
 
@@ -33,6 +33,6 @@ export async function POST(req: Request) {
 
         return NextResponse.json({ message: 'Subscription successful!' });
     } catch (error) {
-        return NextResponse.json({ error: 'An error occurred during subscription' }, { status: 500 });
+        return NextResponse.json({error:'An error occurred during subscription' }, { status: 500 });
     }
 }

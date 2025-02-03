@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Loader2, CheckCircle2, XCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function NewsLetter() {
     const [email, setEmail] = useState("");
@@ -79,7 +80,7 @@ export default function NewsLetter() {
             <div className="flex flex-col items-center lg:flex-row justify-center mx-6 lg:mx-20 mb-16 newsletter-content">
                 {/* Image Section */}
                 <div className="flex-[6] p-2 relative overflow-hidden mb-8 lg:mb-0 lg:ml-12 mx-12 newsletter-image">
-                    <img
+                    <Image
                         src="/images/new (1).png"
                         alt="Newsletter Illustration"
                         className="w-full h-auto rounded-lg"
@@ -140,7 +141,7 @@ export default function NewsLetter() {
                                     <CheckCircle2 className="text-green-500 w-8 h-8" />
                                 </motion.div>
                                 <p className="text-xl font-semibold">
-                                    Thank you! You're now part of the growth journey.
+                                    Thank you! You&#39;re now part of the growth journey.
                                 </p>
                                 <p className="text-gray-600">Stay tuned for insights and updates.</p>
                             </motion.div>
