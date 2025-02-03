@@ -45,7 +45,7 @@ export default function NewsLetter() {
             }
         } catch (error) {
             setPopupType("error");
-            setMessage("An error occurred. Please try again later.");
+            setMessage("error");
         } finally {
             setLoading(false);
             setShowPopup(true);
