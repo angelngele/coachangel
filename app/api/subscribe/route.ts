@@ -33,6 +33,6 @@ export async function POST(req: Request) {
 
         return NextResponse.json({ message: 'Subscription successful!' });
     } catch (error) {
-        return NextResponse.json({error:'An error occurred during subscription' }, { status: 500 });
+        return NextResponse.json({error:error}, { status: 500 });
     }
 }
