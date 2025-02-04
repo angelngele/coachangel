@@ -46,7 +46,7 @@ export default function Navbar() {
                 transition={{ duration: 0.3 }}
             >
                 <div className="text-center">
-                    <Link href="mailto:angel.ngele@thesearchover.com" className="block px-4 py-2 text-gray-700">
+                    <Link href="mailto:coachangel@angelngele.com" className="block px-4 py-2 text-gray-700">
                         Contact Me
                     </Link>
                     <Link
@@ -60,7 +60,7 @@ export default function Navbar() {
 
             {/* Right: Contact Me and Schedule Link Call */}
             <div className="hidden lg:flex gap-4">
-                <Link href="mailto:angel.ngele@thesearchover.com" className="px-4 py-2 text-gray-700">
+                <Link href="mailto:coachangel@angelngele.com" className="px-4 py-2 text-gray-700">
                     Contact Me
                 </Link>
                 <Link

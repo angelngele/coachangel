@@ -141,7 +141,7 @@ export default function NewsLetter() {
                                     <CheckCircle2 className="text-green-500 w-8 h-8" />
                                 </motion.div>
                                 <p className="text-xl font-semibold">
-                                    Thank you! You&#39;re now part of the growth journey.
+                                    Thank You! You&#39;re Now Part Of The Growth Edge.
                                 </p>
                                 <p className="text-gray-600">Stay tuned for insights and updates.</p>
                             </motion.div>

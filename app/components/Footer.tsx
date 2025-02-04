@@ -10,7 +10,7 @@ export default function Footer() {
 
             <div className="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:space-x-8 text-lg md:text-xl font-semibold md:mr-24">
                 <Link
-                    href="https://www.linkedin.com/company/coach-angel/"
+                    href="https://linkedin.com/in/theangelngele"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-green-400"
@@ -19,7 +19,7 @@ export default function Footer() {
                 </Link>
 
                 <Link
-                    href="mailto:angel.ngele@thesearchover.com"
+                    href="mailto:coachangel@angelngele.com"
                     className="hover:text-green-400"
                 >
                     angel.ngele@thesearchover.com
