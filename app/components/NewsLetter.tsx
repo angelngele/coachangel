@@ -43,9 +43,9 @@ export default function NewsLetter() {
                 setPopupType("error");
                 setMessage(data.error || "Oops! Something went wrong.");
             }
-        } catch (error) {
+        } catch {
             setPopupType("error");
-            setMessage("error");
+            setMessage("An error occurred. Please try again later.");
         } finally {
             setLoading(false);
             setShowPopup(true);
