@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: "Coach Angel",
-  description: "Coach Angel Newsletter",
+  description: "Daily Insights And Updates",
 };
 
 export default function RootLayout({
