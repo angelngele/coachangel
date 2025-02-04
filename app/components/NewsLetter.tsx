@@ -72,7 +72,7 @@ export default function NewsLetter() {
                 <div className="text-center mt-5 font-medium">
                     <p className="text-4xl sm:text-5xl newsletter-heading">
                         <span>Let&#39;s Level Up Your</span>
-                        <span className="block">Growth Game</span>
+                        <span className="block">Growth Edge</span>
                     </p>
                 </div>
             </motion.div>
