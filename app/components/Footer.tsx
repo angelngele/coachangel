@@ -22,7 +22,7 @@ export default function Footer() {
                     href="mailto:coachangel@angelngele.com"
                     className="hover:text-green-400"
                 >
-                    angel.ngele@thesearchover.com
+                    coachangel@angelngele.com
                 </Link>
             </div>
         </footer>

@@ -51,7 +51,7 @@ export default function Navbar() {
                     </Link>
                     <Link
                         href="https://calendly.com/theangelngele"
-                        className="block px-4 py-2 text-white border border-black bg-black rounded-full mx-auto my-2"
+                        className="block px-2 py-2 text-white border border-black bg-black rounded-full mx-2 my-2"
                     >
                         Schedule a Call
                     </Link>

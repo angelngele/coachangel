@@ -82,6 +82,8 @@ export default function NewsLetter() {
                 <div className="flex-[6] p-2 relative overflow-hidden mb-8 lg:mb-0 lg:ml-12 mx-12 newsletter-image">
                     <Image
                         src="/images/new (1).png"
+                        width={600}
+                        height={600}
                         alt="Newsletter Illustration"
                         className="w-full h-auto rounded-lg"
                     />
@@ -94,9 +96,10 @@ export default function NewsLetter() {
                         <h1 className="text-2xl font-semibold mb-2 sm:pr-28 sm:mr-20 text-center sm:text-left">
                             One newsletter, straight from me to you. Countless breakthroughs. Join now for expert insights and updates!
                         </h1>
-                        <p className="text-base text-gray-700 mb-4 mr-10 sm:pr-24 sm:mr-28 text-center sm:text-left lg:mr-32">
+                        <p className="text-base text-gray-700 mb-4 mr-0 sm:pr-24 sm:mr-28 text-center sm:text-left lg:mr-32">
                             Weekly tips and strategies to boost your confidence, refine your skills, and find balance. Your growth journey starts here, don&#39;t miss out!
                         </p>
+
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-3 pt-10 sm:pt-20">
@@ -116,6 +119,7 @@ export default function NewsLetter() {
                         </button>
                     </div>
                 </div>
+
             </div>
 
             {/* Popup Notification (Unchanged as per request) */}
