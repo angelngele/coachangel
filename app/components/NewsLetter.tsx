@@ -56,7 +56,7 @@ export default function NewsLetter() {
     return (
         <main>
             {/* Centered "NEWSLETTER" h1 */}
-            <div className="flex justify-center items-center tracking-wider mt-24 lg:mt-36">
+            <div className="flex justify-center items-center tracking-wider mt-12 lg:mt-36">
                 <h1 className="bg-green-100 py-2 text-xs px-4 rounded-full font-medium text-gray-600">
                     NEWSLETTER
                 </h1>
@@ -67,51 +67,49 @@ export default function NewsLetter() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 30, damping: 15 }}
-                className="newsletter-container flex flex-col items-center mb-16 mx-8 lg:mx-28"
+                className="newsletter-container flex flex-col items-center mb-16 mx-6 lg:mx-28"
             >
                 <div className="text-center mt-5 font-medium">
-                    <p className="text-4xl sm:text-5xl newsletter-heading">
+                    <p className="text-3xl sm:text-5xl newsletter-heading">
                         <span>Let&#39;s Level Up Your</span>
-                        <span className="block">Growth Edge</span>
+                        <span className="block">Growth Game</span>
                     </p>
                 </div>
             </motion.div>
 
-            <div className="flex flex-col items-center lg:flex-row justify-center mx-6 lg:mx-20 mb-16 newsletter-content">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:-space-x-16 mx-6 lg:mx-40 mb-16">
                 {/* Image Section */}
-                <div className="flex-[6] p-2 relative overflow-hidden mb-8 lg:mb-0 lg:ml-12 mx-12 newsletter-image">
+                <div className="p-2 mb-8 lg:mb-0 flex justify-center">
                     <Image
                         src="/images/new (1).png"
                         width={600}
                         height={600}
                         alt="Newsletter Illustration"
-                        className="w-full h-auto rounded-lg"
+                        className="rounded-lg w-full max-w-full lg:w-[410px] h-auto lg:h-[430px]"
                     />
-                    <div className="absolute top-0 w-full h-full"></div>
                 </div>
 
                 {/* Text and Form Section */}
-                <div className="flex-[12] bg-green-100 rounded-3xl shadow-md newsletter-text p-5 mx-6 lg:mx-0 lg:mr-28">
-                    <div className="px-4">
-                        <h1 className="text-2xl font-semibold mb-2 sm:pr-28 sm:mr-20 text-center sm:text-left">
+                <div className="bg-green-100 rounded-3xl py-5 px-10 pb-10 w-full lg:max-w-3xl h-auto lg:h-[420px] max-w-full">
+                    <div>
+                        <h1 className="text-xl lg:text-2xl font-semibold mb-2 pt-5 pb-2">
                             One newsletter, straight from me to you. Countless breakthroughs. Join now for expert insights and updates!
                         </h1>
-                        <p className="text-base text-gray-700 mb-4 mr-0 sm:pr-24 sm:mr-28 text-center sm:text-left lg:mr-32">
+                        <p className="text-sm lg:text-base text-gray-700 mb-0">
                             Weekly tips and strategies to boost your confidence, refine your skills, and find balance. Your growth journey starts here, don&#39;t miss out!
                         </p>
-
                     </div>
 
-                    <div className="flex flex-col items-center sm:items-start space-y-3 pt-10 sm:pt-20">
+                    <div className="flex flex-col items-center sm:items-start space-y-3 pt-10 lg:pt-20">
                         <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="name@email.com"
-                            className="w-full p-2 px-5 rounded-full border border-gray-300 focus:outline-none py-3 newsletter-input"
+                            className="w-full p-2 px-5 rounded-full bg-transparent border-2 border-gray-300 focus:outline-none py-3"
                         />
                         <button
-                            className={`w-full bg-green-200 text-black py-2 px-5 rounded-full text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""} newsletter-button`}
+                            className={`w-full bg-green-200 text-black py-2 px-5 rounded-full text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
                             onClick={handleSubscribe}
                             disabled={loading}
                         >
@@ -122,7 +120,7 @@ export default function NewsLetter() {
 
             </div>
 
-            {/* Popup Notification (Unchanged as per request) */}
+            {/* Popup Notification */}
             {showPopup && (
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -136,7 +134,6 @@ export default function NewsLetter() {
                     >
                         {popupType === "success" ? (
                             <motion.div className="flex flex-col items-center justify-center text-center">
-                                {/* Animated Circular Check Icon */}
                                 <motion.div
                                     className="flex items-center justify-center border-4 border-green-500 rounded-full w-16 h-16 mb-4 relative"
                                     animate={{ scale: [0.9, 1, 0.9], opacity: [0.7, 1, 0.7] }}
