@@ -99,7 +99,7 @@ export default function RegisterForm() {
                 });
             }
         } catch (error) {
-            setResponseMessage("❌ Failed to submit form. Please try again.");
+            setResponseMessage(`❌ ${error}`);
         }
 
         setLoading(false);

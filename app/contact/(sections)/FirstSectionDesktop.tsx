@@ -2,16 +2,19 @@
 
 import { useState } from "react";
 import ContactButton from "../../components/ContactButton";
+import Image from "next/image";
 
 export default function FirstSectionDesktop() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="relative flex h-screen md:flex">
+    <div className="relative flex h-screen md:flex pt-5 -pb-5">
       {/* Left Side: Image */}
       <div className="w-1/2 relative">
-        <img
+        <Image
           src="/images/edited1.1.jpg"
+          width={500}
+          height={500}
           alt="Growth and Success"
           className="w-full h-full object-cover"
         />
@@ -26,9 +29,9 @@ export default function FirstSectionDesktop() {
 
         {/* Text Content */}
         <div className="relative max-w-lg">
-          <h1 className="text-5xl font-bold mb-4">Let's Talk</h1>
+          <h1 className="text-5xl font-bold mb-4">Let&#39;s Talk</h1>
           <p className="text-lg mb-6">
-            I'm just one click away from mastering growth and success together.
+            I&#39;m just one click away from mastering growth and success together.
           </p>
           <button
             onClick={() => setShowForm(true)}
