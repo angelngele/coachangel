@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { testimonials } from "../../utils/index"; // Import testimonials from utils
 import { Star } from "lucide-react"; // Lucide-react for star icons
+import Image from "next/image";
 
 export default function Attendees() {
     const containerRef = useRef(null);
@@ -56,7 +57,9 @@ export default function Attendees() {
 
                             {/* Person's Image, Name, and Title */}
                             <div className="flex items-center gap-4 mt-1 -mb-10">
-                                <img
+                                <Image
+                                    width={500}
+                                    height={500}
                                     src={testimonial.image}
                                     alt={testimonial.name}
                                     className="w-12 h-12 rounded-full object-cover"

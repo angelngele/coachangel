@@ -21,9 +21,9 @@ export default function FirstSectionMobile() {
 
             {/* Text Content */}
             <div className="relative max-w-lg text-center">
-                <h1 className="text-4xl font-bold mb-4">Let's Talk</h1>
+                <h1 className="text-4xl font-bold mb-4">Let&#39;s Talk</h1>
                 <p className="text-lg mb-6">
-                    I'm just one click away from mastering growth and success together.
+                    I&#39;m just one click away from mastering growth and success together.
                 </p>
                 <button
                     onClick={() => setShowForm(true)}
