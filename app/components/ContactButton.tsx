@@ -21,27 +21,40 @@ export default function RegisterForm() {
     const [responseMessage, setResponseMessage] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-        const { name, value, type, checked } = e.target as HTMLInputElement;
+    const handleInputChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    ) => {
+        const { name, value, type } = e.target;
 
         setFormData(prevState => {
             const fieldName = name as keyof typeof prevState;
 
             if (type === "checkbox") {
+                const inputElement = e.target as HTMLInputElement; // Assert e.target to HTMLInputElement
+
                 const values = new Set(prevState[fieldName] as string[]);
-                checked ? values.add(value) : values.delete(value);
+
+                if (inputElement.checked) { // Use inputElement.checked instead of e.target.checked
+                    values.add(value);
+                } else {
+                    values.delete(value);
+                }
+
                 return { ...prevState, [fieldName]: Array.from(values) };
             }
 
             return { ...prevState, [fieldName]: value };
         });
 
-        // Remove field-specific error on change
         setErrors(prevErrors => ({
             ...prevErrors,
             [name]: ""
         }));
     };
+
+
+
+
 
     const validateForm = () => {
         const newErrors: { [key: string]: string } = {};
@@ -109,7 +122,7 @@ export default function RegisterForm() {
     return (
         <div className="flex justify-center items-center min-h-screen bg-green-100">
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl mt-20 form-container form-box">
-                <h2 className="text-center text-2xl font-bold text-green-500 mb-6 form-title">Let's Talk</h2>
+                <h2 className="text-center text-2xl font-bold text-green-500 mb-6 form-title">Let&#39;s Talk</h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <label className=" block text-black">
