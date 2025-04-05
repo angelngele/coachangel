@@ -4,21 +4,29 @@ import { useEffect, useState } from "react";
 import FirstSectionDesktop from "./(sections)/FirstSectionDesktop";
 import FirstSectionMobile from "./(sections)/FirstSectionMobile";
 
-export default function Page() {
-  const [isMobile, setIsMobile] = useState(false);
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState<boolean | null>(null); // null initially to avoid mismatch
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Mobile if width < 768px
-    };
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const handleChange = (event: MediaQueryListEvent) => setIsMobile(event.matches);
 
-    // Check on mount
-    handleResize();
+    // Set initial state
+    setIsMobile(mediaQuery.matches);
 
-    // Listen for window resize
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // Listen for changes
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  return <>{isMobile ? <FirstSectionMobile /> : <FirstSectionDesktop />}</>;
+  return isMobile;
+}
+
+
+export default function Page() {
+  const isMobile = useIsMobile();
+
+  if (isMobile === null) return null; // or a loader/spinner
+
+  return isMobile ? <FirstSectionMobile /> : <FirstSectionDesktop />;
 }

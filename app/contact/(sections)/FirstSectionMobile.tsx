@@ -2,27 +2,29 @@
 
 import { useState } from "react";
 import ContactButton from "../../components/ContactButton";
+import Image from "next/image";
 
 export default function FirstSectionMobile() {
     const [showForm, setShowForm] = useState(false);
 
     return (
-        <div
-            className="relative flex flex-col h-screen md:hidden items-center justify-center p-10 text-white"
-            style={{
-                backgroundImage: "url('/images/edited1.1.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-            }}
-        >
-            {/* Overlay for Mobile (Darker Background) */}
-            <div className="absolute inset-0 bg-black/70 z-0"></div>
+        <div className="relative w-full h-screen flex flex-col items-center justify-center text-white overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/MobileView design (31).png"
+                    alt="Angel Ngele"
+                    fill
+                    priority
+                    className="object-cover w-full h-full"  // Ensure full width and height
+                />
+                <div className="absolute inset-0 bg-black/70" />
+            </div>
 
-            {/* Text Content */}
-            <div className="relative max-w-lg text-center">
-                <h1 className="text-4xl font-bold mb-4">Let&#39;s Talk</h1>
-                <p className="text-lg mb-6">
+            {/* Content */}
+            <div className="relative z-10 w-full max-w-[90%] px-4 text-center">
+                <h1 className="text-3xl sm:text-4xl font-bold mb-4">Let&#39;s Talk</h1>
+                <p className="text-base sm:text-lg mb-6">
                     I&#39;m just one click away from mastering growth and success together.
                 </p>
                 <button
@@ -33,24 +35,22 @@ export default function FirstSectionMobile() {
                 </button>
             </div>
 
-            {/* Modal Form */}
+            {/* Modal */}
             {showForm && (
-                <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl relative max-h-[80vh] overflow-y-auto">
-                        {/* Close Button */}
+                <div className="fixed inset-0 z-50 flex justify-center items-center bg-black/60 px-4">
+                    <div className="bg-white p-6 rounded-xl shadow-xl w-full max-w-md max-h-[80vh] overflow-y-auto relative">
                         <button
                             onClick={() => setShowForm(false)}
-                            className="absolute top-3 right-3 text-gray-600 hover:text-red-500 text-xl"
+                            className="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-2xl"
                         >
-                            ✖
+                            &times;
                         </button>
 
-                        {/* Contact Form Component */}
+                        {/* Contact Form */}
                         <ContactButton />
                     </div>
                 </div>
             )}
-
         </div>
     );
 }
