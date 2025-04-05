@@ -73,7 +73,7 @@ export default function FirstSection() {
         </p>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10 space-y-5 md:space-y-0">
         <Link href={"https://calendly.com/theangelngele/60-min-service-positioning?back=1&month=2025-02"}>
           <span className="border border-slate-900 bg-slate-900 text-white py-2 px-5 rounded-full">
             Inquire Now

@@ -41,7 +41,7 @@ export default function FirstSectionMobile() {
                     <div className="bg-white p-6 rounded-xl shadow-xl w-full max-w-md max-h-[80vh] overflow-y-auto relative">
                         <button
                             onClick={() => setShowForm(false)}
-                            className="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-2xl"
+                            className="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-7xl"
                         >
                             &times;
                         </button>

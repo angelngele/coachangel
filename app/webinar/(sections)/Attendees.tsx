@@ -22,7 +22,7 @@ export default function Attendees() {
                 transition={{ type: "spring", stiffness: 30, damping: 15 }}
                 className="flex flex-col items-center mb-16 lg:mx-28"
             >
-                <div className="text-center mt-5 font-medium">
+                <div className="text-center mt-20 font-medium">
                     <p className="text-3xl sm:text-5xl">What Attendees Are Saying</p>
                 </div>
             </motion.div>
