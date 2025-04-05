@@ -16,7 +16,7 @@ export default function Navbar() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 30 }}
-            className="fixed top-0 w-full z-50 flex items-center justify-between p-4 px-6 lg:px-20 bg-gray-100 shadow-md py-5"
+            className="fixed top-0 w-full z-50 flex items-center justify-between p-4 px-6 lg:px-20 bg-gray-100 shadow-md py-3"
         >
             {/* Left: Name */}
             <div className="text-4xl font-bold">
@@ -26,24 +26,26 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            {/* Center: Links (for Desktop) */}
             <div className="hidden lg:flex flex-grow justify-center gap-8">
-                <Link href="/contact" className="px-2 py-2 text-gray-700 rounded-full hover:bg-green-500 hover:text-white">
-                    Contact Me
-                </Link>
-                <Link href="/webinar" className="px-2 py-2 text-gray-700 rounded-full hover:bg-green-500 hover:text-white">
-                    Webinar
-                </Link>
-            </div>
+                {/* Center: Links (for Desktop) */}
+                <div className="hidden lg:flex flex-grow justify-center gap-8">
+                    <Link href="/webinar" className="px-4 py-2 text-gray-700 rounded-full hover:bg-black hover:border-black hover:text-white">
+                        Webinar
+                    </Link>
+                </div>
 
-            {/* Right: Call Button */}
-            <div className="hidden lg:flex">
-                <Link
-                    href="https://calendly.com/theangelngele"
-                    className="px-9 pt-2 pb-3 text-white border border-black bg-black rounded-full"
-                >
-                    Schedule a Call
-                </Link>
+                {/* Right: Call Button */}
+                <div className="hidden lg:flex">
+                    <Link href="/contact" className="px-2 py-2 text-gray-700 rounded-full hover:bg-black hover:border-black hover:text-white mr-5">
+                        Contact Me
+                    </Link>
+                    <Link
+                        href="https://calendly.com/theangelngele"
+                        className="px-9 pt-2 pb-3 text-white border border-black bg-black rounded-full"
+                    >
+                        Schedule a Call
+                    </Link>
+                </div>
             </div>
 
             {/* Hamburger Menu for Mobile */}

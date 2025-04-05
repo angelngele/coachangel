@@ -11,7 +11,7 @@ export default function FirstSection() {
             <div className="relative flex h-screen">
                 {/* Left Side: Image */}
                 <div className="w-1/2 relative">
-                    <img src="/images/edited1.1.jpg" alt="Growth and Success" className="w-full h-full object-cover" />
+                    <img src="/images/MobileView design(31).png" alt="Growth and Success" className="w-full h-full object-cover" />
 
                     {/* Overlay for Image (Left to Right) */}
                     <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/75"></div>
