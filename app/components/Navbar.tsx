@@ -29,14 +29,14 @@ export default function Navbar() {
             <div className="hidden lg:flex flex-grow justify-center gap-8">
                 {/* Center: Links (for Desktop) */}
                 <div className="hidden lg:flex flex-grow justify-center gap-8">
-                    <Link href="/webinar" className="px-4 py-2 text-gray-700 rounded-full hover:bg-black hover:border-black hover:text-white">
+                    <Link href="/webinar" className="px-2 py-2 text-gray-700  hover:text-green-500 ml-5">
                         Webinar
                     </Link>
                 </div>
 
                 {/* Right: Call Button */}
                 <div className="hidden lg:flex">
-                    <Link href="/contact" className="px-2 py-2 text-gray-700 rounded-full hover:bg-black hover:border-black hover:text-white mr-5">
+                    <Link href="/contact" className="px-2 py-2 text-gray-700  hover:text-green-500 mr-5">
                         Contact Me
                     </Link>
                     <Link

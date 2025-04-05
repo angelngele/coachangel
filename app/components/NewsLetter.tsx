@@ -56,7 +56,7 @@ export default function NewsLetter() {
     return (
         <main>
             {/* Centered "NEWSLETTER" h1 */}
-            <div className="flex justify-center items-center tracking-wider mt-36 lg:mt-36">
+            <div className="flex justify-center items-center tracking-wider mt-36 lg:mt-36 md:mt-20">
                 <h1 className="bg-green-100 py-2 text-xs px-4 rounded-full font-medium text-gray-600">
                     NEWSLETTER
                 </h1>

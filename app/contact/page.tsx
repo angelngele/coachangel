@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import FirstSectionDesktop from "./(sections)/FirstSectionDesktop";
 import FirstSectionMobile from "./(sections)/FirstSectionMobile";
+import Attendees from "../webinar/(sections)/Attendees";
+import NewsLetter from "../components/NewsLetter";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null); // null initially to avoid mismatch
@@ -22,11 +24,16 @@ function useIsMobile() {
   return isMobile;
 }
 
-
 export default function Page() {
   const isMobile = useIsMobile();
 
   if (isMobile === null) return null; // or a loader/spinner
 
-  return isMobile ? <FirstSectionMobile /> : <FirstSectionDesktop />;
+  return (
+    <main>
+      {isMobile ? <FirstSectionMobile /> : <FirstSectionDesktop />}
+      <Attendees />
+      <NewsLetter />
+    </main>
+  );
 }
