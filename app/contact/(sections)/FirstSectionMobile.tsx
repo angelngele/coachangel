@@ -10,7 +10,7 @@ export default function FirstSectionMobile() {
     return (
         <div className="relative w-full h-screen flex flex-col items-center justify-center text-white overflow-hidden">
             {/* Background Image */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 -mt-48">
                 <Image
                     src="/images/MobileView design (31).png"
                     alt="Angel Ngele"
