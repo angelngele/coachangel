@@ -10,7 +10,7 @@ export default function FirstSectionDesktop() {
   return (
     <div className="relative w-full h-screen flex items-center justify-end px-16 text-white overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 mt-20">
+      <div className="absolute inset-0 z-0 mt-16">
         <Image
           src="/images/Angel Ngele (30).png"
           alt="Growth and Success"
