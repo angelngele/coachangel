@@ -16,7 +16,7 @@ export default function FirstSectionMobile() {
                     alt="Angel Ngele"
                     fill
                     priority
-                    className="object-cover w-full h-full"  // Ensure full width and height
+                    className="object-cover w-full h-full" // Ensure full width and height
                 />
                 <div className="absolute inset-0 bg-black/70" />
             </div>

@@ -8,8 +8,8 @@ export default function RegisterForm() {
         middleName: "",
         lastName: "",
         email: "",
-        gender: "",
-        brandName: "",
+        // gender: "",
+        // brandName: "",
         helpNeeded: [] as string[],
         brandStatus: [] as string[],
         referralSource: [] as string[],
@@ -62,7 +62,7 @@ export default function RegisterForm() {
         if (!formData.firstName.trim()) newErrors.firstName = "First name is required.";
         if (!formData.lastName.trim()) newErrors.lastName = "Last name is required.";
         if (!formData.email.trim()) newErrors.email = "Email is required.";
-        if (!formData.gender) newErrors.gender = "Gender selection is required.";
+        // if (!formData.gender) newErrors.gender = "Gender selection is required.";
         if (!formData.helpNeeded.length) newErrors.helpNeeded = "Select at least one option.";
         if (!formData.brandStatus.length) newErrors.brandStatus = "Select at least one option.";
         if (!formData.referralSource.length) newErrors.referralSource = "Select at least one option.";
@@ -102,8 +102,8 @@ export default function RegisterForm() {
                     middleName: "",
                     lastName: "",
                     email: "",
-                    gender: "",
-                    brandName: "",
+                    // gender: "",
+                    // brandName: "",
                     helpNeeded: [],
                     brandStatus: [],
                     referralSource: [],
@@ -142,7 +142,7 @@ export default function RegisterForm() {
                         {errors.lastName && <p className="text-red-500">{errors.lastName}</p>}
                     </label>
 
-                    <label className=" block text-black">
+                    {/* <label className=" block text-black">
                         Gender
                         <select name="gender" value={formData.gender} onChange={handleInputChange} required className="border p-2 w-full rounded-lg form-input">
                             <option value="">Select Gender</option>
@@ -150,15 +150,15 @@ export default function RegisterForm() {
                             <option value="Female">Female</option>
                         </select>
                         {errors.gender && <p className="text-red-500">{errors.gender}</p>}
-                    </label>
+                    </label> */}
 
-                    <label className=" block text-black">
+                    {/* <label className=" block text-black">
                         Brand Name
                         <input type="text" name="brandName" value={formData.brandName} onChange={handleInputChange} placeholder="Brand Name" className="border p-2 w-full rounded-lg form-input" />
-                    </label>
+                    </label> */}
 
                     <fieldset className="bg-gray-100 p-4 rounded-lg">
-                        <legend className="font-semibold text-black">What do you need my help with? (Required)</legend>
+                        <legend className="font-semibold text-black">What are you seeking support with? (Check all that apply)</legend>
                         {["Linkedin Coaching", "Speaker at event", "Sponsorship", "B2B Advisory", "Strategy", "Writing"].map(option => (
                             <label key={option} className=" block text-black">
                                 <input type="checkbox" name="helpNeeded" value={option} checked={formData.helpNeeded.includes(option)} onChange={handleInputChange} className="mr-2" />
@@ -169,7 +169,7 @@ export default function RegisterForm() {
                     </fieldset>
 
                     <fieldset className="bg-gray-100 p-4 rounded-lg">
-                        <legend className="font-semibold text-black">How would you describe your brand? (Required)</legend>
+                        <legend className="font-semibold text-black">Where are you at right now in your journey?(Required)</legend>
                         {["New Brand", "Established Business", "Growing Startup", "Freelancer", "Corporate Entity"].map(option => (
                             <label key={option} className=" block text-black">
                                 <input type="checkbox" name="brandStatus" value={option} checked={formData.brandStatus.includes(option)} onChange={handleInputChange} className="mr-2" />
@@ -180,7 +180,7 @@ export default function RegisterForm() {
                     </fieldset>
 
                     <label className=" block text-black">
-                        Message
+                        This is your space. What’s going on? What led you here? Where do you want to go?
                         <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Message" className="border p-2 w-full rounded-lg form-input" />
                     </label>
 

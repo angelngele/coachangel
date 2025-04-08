@@ -87,7 +87,7 @@ export default function KeyNotes() {
             </div>
             {/* Hire Angel Button */}
             <div className="flex justify-center mt-10 mb-36">
-                <Link href={"https://calendly.com/theangelngele/60-min-service-positioning?back=1&month=2025-02"}>
+                <Link href={"/contact"}>
                     <button className="bg-black text-white py-3 px-8 rounded-full text-sm font-medium hover:bg-green-700 transition">
                         Hire Angel as a Speaker
                     </button>
