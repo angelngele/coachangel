@@ -32,6 +32,9 @@ export default function Navbar() {
                     <Link href="/webinar" className="px-2 py-2 text-gray-700  hover:text-green-500 ml-5">
                         Webinar
                     </Link>
+                    <Link href="/newsletter" className="px-2 py-2 text-gray-700  hover:text-green-500 ml-5">
+                        Newsletter
+                    </Link>
                 </div>
 
                 {/* Right: Call Button */}
@@ -77,6 +80,9 @@ export default function Navbar() {
                 <div className="text-center">
                     <Link href="/webinar" className="py-2 text-gray-700">
                         Webinar
+                    </Link>
+                    <Link href="/newsletter" className="block py-2 text-gray-700">
+                        Newsletter
                     </Link>
                     <Link href="/contact" className="block py-2 text-gray-700">
                         Contact Me

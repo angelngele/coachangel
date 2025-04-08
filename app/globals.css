@@ -213,3 +213,28 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked::before {
   transform: translate(-50%, -50%) scale(1);
 }
+
+
+
+/* Apply on smaller tablet screens (portrait & landscape) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .bg-image-tablet {
+    object-position: center center !important; /* Center image on tablets */
+  }
+}
+
+/* iPad portrait screen specific */
+@media only screen and (width: 820px) and (orientation: portrait) {
+  .bg-image-tablet {
+    object-position: center center !important;
+  }
+}
+
+/* Ensure mobile devices have a centered background image */
+@media (max-width: 768px) {
+  .bg-image-tablet {
+    object-position: center center !important;
+  }
+}
+
+
