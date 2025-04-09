@@ -159,7 +159,7 @@ export default function RegisterForm() {
 
                     <fieldset className="bg-gray-100 p-4 rounded-lg">
                         <legend className="font-semibold text-black">What are you seeking support with? (Check all that apply)</legend>
-                        {["Linkedin Coaching", "Speaker at event", "Sponsorship", "B2B Advisory", "Strategy", "Writing"].map(option => (
+                        {["Clarity on life direction", "Confidence and mindset", "Career transitions", "Leadership development", "Accountability & habits", "Public speaking & influence"].map(option => (
                             <label key={option} className=" block text-black">
                                 <input type="checkbox" name="helpNeeded" value={option} checked={formData.helpNeeded.includes(option)} onChange={handleInputChange} className="mr-2" />
                                 {option}
@@ -170,7 +170,7 @@ export default function RegisterForm() {
 
                     <fieldset className="bg-gray-100 p-4 rounded-lg">
                         <legend className="font-semibold text-black">Where are you at right now in your journey?(Required)</legend>
-                        {["New Brand", "Established Business", "Growing Startup", "Freelancer", "Corporate Entity"].map(option => (
+                        {["Just getting started with self-growth", "I've tried on my own, but feel stuck", "I'm progressing and want to go deeper", "Freelancer", "Corporate Entity"].map(option => (
                             <label key={option} className=" block text-black">
                                 <input type="checkbox" name="brandStatus" value={option} checked={formData.brandStatus.includes(option)} onChange={handleInputChange} className="mr-2" />
                                 {option}
@@ -180,7 +180,7 @@ export default function RegisterForm() {
                     </fieldset>
 
                     <label className=" block text-black">
-                        This is your space. What’s going on? What led you here? Where do you want to go?
+                        This is your space. What&#39;s going on? What led you here? Where do you want to go?
                         <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Message" className="border p-2 w-full rounded-lg form-input" />
                     </label>
 
