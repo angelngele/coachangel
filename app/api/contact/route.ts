@@ -9,7 +9,7 @@ export async function POST(req: Request) {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
 
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/contacts/`, {
+        const response = await fetch('http://localhost:5000/api/contacts/', { // Fixed URL
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
