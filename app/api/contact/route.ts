@@ -9,7 +9,7 @@ export async function POST(req: Request) {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
 
-        const response = await fetch('https://coachbackend-htox.onrender.com/api/contacts/', { // Fixed URL
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
