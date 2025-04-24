@@ -8,9 +8,8 @@ export async function POST(req: Request) {
         // Use AbortController for timeout handling
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
-        console.log("posting to:", `${process.env.NEXT_PUBLIC_API_BASE_URL}`);        
 
-        const response = await fetch(`https://coachbackend-htox.onrender.com/api/contacts/`, {
+        const response = await fetch(`http://localhost:5000/api/contacts/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +37,14 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: errorMessage }, { status: response.status });
         }
 
-        const data = await response.json(); // Ensure response is parsed correctly
+        const data = await (async () => {
+            try {
+                return await response.json();
+            } catch (err) {
+                console.warn("No JSON response from backend:", err);
+                return {};
+            }
+        })();
 
         console.log("Backend response:", data);
 
