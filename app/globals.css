@@ -214,8 +214,6 @@ input[type="checkbox"]:checked::before {
   transform: translate(-50%, -50%) scale(1);
 }
 
-
-
 /* Apply on smaller tablet screens (portrait & landscape) */
 @media (min-width: 600px) and (max-width: 1024px) {
   .bg-image-tablet {
@@ -237,4 +235,15 @@ input[type="checkbox"]:checked::before {
   }
 }
 
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
