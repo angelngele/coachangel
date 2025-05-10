@@ -1,0 +1,36 @@
+# Node modules & build output
+node_modules
+.next
+out
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# OS / editor files
+.DS_Store
+*.swp
+*.swo
+.idea
+.vscode
+
+# Env files (optional — include only if not needed in image)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Git
+.git
+.gitignore
+
+# Docker files not needed inside image
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile
+
+# Misc
+coverage
+*.log
