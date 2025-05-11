@@ -79,7 +79,7 @@ export default function FirstSection() {
             Inquire Now
           </span>
         </Link>
-        <Link href={"/documents/Angel Ngele - Speaker Brief.pdf"}>
+        <Link href={"https://drive.google.com/file/d/1x6pu2mk98Xrad3pJhBFBxcVR_6xtwD1z/view?usp=drive_link"}>
           <span className="border border-green-200 bg-green-200 text-black py-2 px-5 rounded-full">
             Speaker Profile
           </span>
