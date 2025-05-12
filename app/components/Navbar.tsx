@@ -43,8 +43,9 @@ export default function Navbar() {
                         Contact Me
                     </Link>
                     <Link
-                        href="https://calendly.com/theangelngele"
-                        className="px-9 pt-2 pb-3 text-white border border-black bg-black rounded-full"
+                        href="https://calendly.com/theangelngele" target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-9 pt-2 pb-3 text-white border border-black bg-black rounded-full block transition-all duration-1000 ease-in-out hover:bg-green-200 hover:text-black hover:border-green-200"
                     >
                         Schedule a Call
                     </Link>
@@ -88,8 +89,9 @@ export default function Navbar() {
                         Contact Me
                     </Link>
                     <Link
-                        href="https://calendly.com/theangelngele"
-                        className="block py-2 text-white border border-black bg-black rounded-full mx-2 my-2"
+                        href="https://calendly.com/theangelngele" target="_blank"
+                        rel="noopener noreferrer"
+                        className="block py-2 text-white border border-black bg-black rounded-full mx-2 my-2 transition-all duration-1000 ease-in-out hover:bg-green-200 hover:text-black hover:border-green-200"
                     >
                         Schedule a Call
                     </Link>

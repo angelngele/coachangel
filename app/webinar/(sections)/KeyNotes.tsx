@@ -88,7 +88,7 @@ export default function KeyNotes() {
             {/* Hire Angel Button */}
             <div className="flex justify-center mt-10 mb-36">
                 <Link href={"/contact"}>
-                    <button className="bg-black text-white py-3 px-8 rounded-full text-sm font-medium hover:bg-green-700 transition">
+                    <button className="bg-black text-white py-3 px-8 rounded-full text-sm font-medium transition-all duration-1000 ease-in-out hover:bg-green-200 hover:text-black">
                         Hire Angel as a Speaker
                     </button>
                 </Link>
