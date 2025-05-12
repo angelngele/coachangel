@@ -109,7 +109,7 @@ export default function NewsLetter() {
                             className="w-full p-2 px-5 rounded-full bg-transparent border-2 border-gray-300 focus:outline-none py-3"
                         />
                         <button
-                            className={`w-full bg-green-200 text-black py-2 px-5 rounded-full text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+                            className={`w-full bg-green-200 text-black py-2 px-5 rounded-full transition-all duration-1000 ease-in-out hover:bg-black hover:text-green-200 hover:border-green-200 text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
                             onClick={handleSubscribe}
                             disabled={loading}
                         >

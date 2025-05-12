@@ -72,15 +72,15 @@ export default function FirstSection() {
           <span>lasting resilience.</span>
         </p>
       </div>
-
+      {/* transition-all duration-1000 ease-in-out */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10 space-y-5 md:space-y-0">
         <Link href={"/contact"}>
-          <span className="border border-slate-900 bg-slate-900 text-white py-2 px-5 rounded-full">
+          <span className="border border-slate-900 bg-slate-900 text-white py-2 px-5 rounded-full transition-all duration-1000 ease-in-out hover:bg-green-200 hover:text-slate-900 hover:border-green-200">
             Inquire Now
           </span>
         </Link>
-        <Link href={"https://drive.google.com/file/d/1x6pu2mk98Xrad3pJhBFBxcVR_6xtwD1z/view?usp=drive_link"}>
-          <span className="border border-green-200 bg-green-200 text-black py-2 px-5 rounded-full">
+        <Link href={"https://drive.google.com/file/d/1x6pu2mk98Xrad3pJhBFBxcVR_6xtwD1z/view?usp=drive_link"} target="_blank" rel="noopener noreferrer">
+          <span className="border border-green-200 bg-green-200 text-black py-2 px-5 rounded-full transition-all duration-1000 ease-in-out hover:bg-black hover:text-white hover:border-black">
             Speaker Profile
           </span>
         </Link>
