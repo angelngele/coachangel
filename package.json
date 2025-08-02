@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npx tailwindcss -i ./app/globals.css -o ./public/output.css --minify && next build",
+    "build": "next build",
     "start": "next dev -p $PORT",
     "lint": "next lint",
     "upgrade": "npx npm-check-updates -u && npm install"
@@ -18,7 +18,8 @@
     "lucide-react": "^0.536.0",
     "next": "^15.4.5",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -27,9 +28,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
-    "postcss": "^8",
+    "postcss": "^8.5.6",
     "semver": "^7.7.2",
-    "tailwindcss": "^4.1.11",
     "typescript": "^5"
   }
 }
