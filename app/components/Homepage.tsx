@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Home() {
     return (
-        <main className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-0 py-12 gap-20">
+        <main className="min-h-screen flex flex-col md:flex-row items-center justify-between px-0 md:px-0 py-12 gap-20 mt-10">
             {/* Left Side */}
             <div className="md:w-1/2 -mt-44 pt-5">
                 <p className="text-3xl font-medium text-green-700">Hi, I&apos;m Angel</p>
@@ -21,7 +21,7 @@ export default function Home() {
                 </p>
 
                 {/* Avatars + Stats */}
-                <div className="flex items-center space-x-4 pt-8">
+                <div className="flex items-center space-x-0 pt-8">
                     <div className="flex -space-x-2">
                         {[1, 2, 3, 4].map(i => (
                             <div key={i} className="relative w-[60px] h-[60px]">
@@ -34,20 +34,24 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
-                    <span className="text-gray-700">Mentored over 100+ individuals.</span>
+                    <span className="text-gray-700 px-0 md:px-2">Mentored over 100+ individuals.</span>
                 </div>
 
 
 
                 {/* CTA Buttons */}
-                <div className="flex space-x-4 pt-8">
-                    <button className="bg-black text-white px-6 py-3 rounded-full text-lg">View Services</button>
-                    <button className="bg-green-200 text-green-800 px-6 py-3 rounded-full text-lg">Schedule a Call</button>
+                <div className="flex flex-col sm:flex-row gap-4 pt-8">
+                    <button className="w-full sm:w-auto bg-black text-white px-6 py-3 rounded-full text-lg">
+                        View Services
+                    </button>
+                    <button className="w-full sm:w-auto bg-green-200 text-green-800 px-6 py-3 rounded-full text-lg">
+                        Schedule a Call
+                    </button>
                 </div>
             </div>
 
             {/* Left-aligned Image Section */}
-            <div className="md:w-1/2 mt-40 -pt-40 md:-mt-40 md:-pt-40 relative">
+            <div className="md:w-1/2 -mt-4 -pt-40 md:-mt-40 md:-pt-40 relative px-4 md:px-0">
                 <Image
                     src="/images/angelbackground2.png"
                     alt="Angel"
@@ -56,7 +60,7 @@ export default function Home() {
                     className="rounded-xl mx-auto"
                 />
 
-                <div className="space-y-4 absolute top-64 left-0 -translate-x-1/4 -translate-y-6 mt-20">
+                <div className="space-y-4 absolute top-64 left-0 -translate-x-1/4 -translate-y-6 mt-10 md:mt-40 px-4 md:px-0">
                     {[
                         { src: '/images/YourGrowth.png', alt: 'Your Growth' },
                         { src: '/images/helpingYouRedefine.png', alt: 'Helping Redefine Success' },

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import FirstSectionDesktop from "./(sections)/FirstSectionDesktop";
 import FirstSectionMobile from "./(sections)/FirstSectionMobile";
 import Attendees from "../webinar/(sections)/Attendees";
-import NewsLetter from "../components/NewsLetter";
+import NewsLetter from "../../components/NewsLetter";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null); // null initially to avoid mismatch

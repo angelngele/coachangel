@@ -1,48 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* body {
-  background: radial-gradient(
-    circle at -100% -100%,
-    #78b499 50%,
-    transparent 60%
-  );
-  background: radial-gradient(
-    circle at -100% -100%,
-    #78b499 50%,
-    transparent 60%
-  );
+/* For Homepage Component */
+.custom-radial-bg {
+  background-image: radial-gradient(
+      600px at top left,
+      #22c55e 0%,
+      white 50%,
+      white 100%
+    ),
+    radial-gradient(600px at bottom right, #22c55e 0%, white 50%, white 100%);
   background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-size: 600px 600px, 600px 600px;
 }
-
-@keyframes moveRight {
-  from {
-      transform: translateX(0%);
-  }
-  to {
-      transform: translateX(-50%);
-  }
-}
-
-@keyframes moveLeft {
-  from {
-      transform: translateX(0%);
-  }
-  to {
-      transform: translateX(50%);
-  }
-}
-
-.animate-moveRight {
-  animation: moveRight 10s linear infinite;
-}
-
-.animate-moveLeft {
-  animation: moveLeft 10s linear infinite;
-} */
-
-/* styles.css */
 
 /* Mobile screens - adjustments */
 @media (max-width: 768px) {
@@ -246,4 +216,30 @@ input[type="checkbox"]:checked::before {
 
 .animate-spin-slow {
   animation: spin-slow 2s linear infinite;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-moveLeft {
+  animation: moveLeft linear infinite;
+}
+
+.animate-moveRight {
+  animation: moveRight linear infinite;
 }

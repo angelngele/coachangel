@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
-import { testimonials } from "../../utils/index"; // Import testimonials from utils
+import { testimonials } from "../utils/index";
 import { Star } from "lucide-react"; // Lucide-react for star icons
 import Image from "next/image";
 
