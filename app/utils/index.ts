@@ -65,3 +65,18 @@ export const testimonials = [
     },
 ];
 
+
+export const topLogos = [
+    '/logos/thinkers.png',
+    '/logos/LinkedIn.png',
+    '/logos/CompTia.png',
+    '/logos/GitHub.png',
+    '/logos/Canva.png',
+];
+
+export const bottomLogos = [
+    '/logos/Jobberman.png',
+    '/logos/ServiceNow.png',
+    '/logos/Microsoft.png',
+    '/logos/ProjectManagementInstitute.png',
+];
