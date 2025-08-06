@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -41,12 +42,20 @@ export default function Home() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                    <button className="w-full sm:w-auto bg-black text-white px-6 py-3 rounded-full text-lg">
-                        View Services
-                    </button>
-                    <button className="w-full sm:w-auto bg-green-200 text-green-800 px-6 py-3 rounded-full text-lg">
-                        Schedule a Call
-                    </button>
+                    <Link
+                        href="#services"
+                    >
+                        <button className="w-full sm:w-auto bg-black text-white px-6 py-3 rounded-full text-lg">
+                            View Services
+                        </button>
+                    </Link>
+                    <Link
+                        href={"https://calendly.com/theangelngele"} target="_blank"
+                        rel="noopener noreferrer">
+                        <button className="w-full sm:w-auto bg-green-200 text-green-800 px-6 py-3 rounded-full text-lg">
+                            Schedule a Call
+                        </button>
+                    </Link>
                 </div>
             </div>
 

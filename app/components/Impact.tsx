@@ -23,7 +23,7 @@ export default function ImpactPage() {
                         </h2>
                     </div>
                     <p className="text-gray-500 max-w-md text-base md:text-lg">
-                        I’m here to guide you toward tangible results — Sharper Clarity,
+                        I&apos;m here to guide you toward tangible results — Sharper Clarity,
                         Stronger Confidence, and Career Breakthroughs.
                     </p>
                 </div>

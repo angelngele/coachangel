@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link'
 
 export default function HeroSection() {
     return (
@@ -37,7 +38,7 @@ export default function HeroSection() {
                 <div className="flex-1 self-stretch flex flex-col justify-center pr-6 md:pr-12 lg:pr-28">
                     <div className="text-gray-700 space-y-10 text-lg md:text-xl leading-relaxed">
                         <p >
-                            Elevate your team event with Angel’s transformative workshops on leadership,
+                            Elevate your team event with Angel&apos;s transformative workshops on leadership,
                             public speaking, and mindset. Inspire growth, ignite innovation, and empower
                             lasting resilience.
                         </p>
@@ -69,12 +70,18 @@ export default function HeroSection() {
 
                         {/* Action Buttons */}
                         <div className="pt-6 flex flex-col sm:flex-row gap-4">
-                            <button className="bg-black text-white px-6 py-3 rounded-full text-sm hover:opacity-90">
-                                Inquire Now
-                            </button>
-                            <button className="bg-green-200 text-black px-6 py-3 rounded-full text-sm hover:bg-green-300">
-                                Speaker Profile
-                            </button>
+                            <Link
+                                href="/contact"
+                            >
+                                <button className="bg-black text-white px-6 py-3 rounded-full text-sm hover:opacity-90">
+                                    Inquire Now
+                                </button>
+                            </Link>
+                            <Link href={"https://drive.google.com/file/d/1x6pu2mk98Xrad3pJhBFBxcVR_6xtwD1z/view?usp=drive_link"} target="_blank" rel="noopener noreferrer">
+                                <button className="bg-green-200 text-black px-6 py-3 rounded-full text-sm hover:bg-green-300">
+                                    Speaker Profile
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -93,6 +100,6 @@ export default function HeroSection() {
                     </div>
                 </div>
             </motion.section>
-        </main>
+        </main >
     );
 }
