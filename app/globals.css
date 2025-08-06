@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* For Homepage Component */
 .custom-radial-bg {
   background-image: radial-gradient(

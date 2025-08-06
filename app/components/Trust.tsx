@@ -73,7 +73,7 @@ export default function TestimonialCarousel() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="bg-green-100 p-6 rounded-2xl min-w-[320px] max-w-sm flex-shrink-0 shadow-md"
+                            className="bg-green-100 p-6 rounded-2xl min-w-[320px] max-w-sm shrink-0 shadow-md"
                         >
                             <div className="flex space-x-1 mb-4">
                                 {Array(5)

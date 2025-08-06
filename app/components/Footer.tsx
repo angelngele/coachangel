@@ -36,7 +36,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="text-sm text-center">
-                © 2024 – Angele
+                © 2024 {"-"} Angele
             </div>
         </footer>
     );

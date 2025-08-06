@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body
-        className={`${manrope.variable} ${inter.variable} antialiased`}
+        className={`${manrope.variable} ${inter.variable} antialiased, scroll-smooth`}
       >
         <Navbar />
         {children}

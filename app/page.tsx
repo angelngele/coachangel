@@ -17,7 +17,9 @@ export default function Home() {
       <LogoCarousel />
       <About />
       <ImpactPage />
-      <ServicesPage />
+      <section id="services" className="w-full">
+        <ServicesPage />
+      </section>
       <Webinars />
       <Attendees />
       <NewsLetter />

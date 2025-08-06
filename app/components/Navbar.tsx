@@ -26,9 +26,9 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            <div className="hidden lg:flex flex-grow justify-center gap-8">
+            <div className="hidden lg:flex grow justify-center gap-8">
                 {/* Center: Links (for Desktop) */}
-                <div className="hidden lg:flex flex-grow justify-center gap-8">
+                <div className="hidden lg:flex grow justify-center gap-8">
                     <Link href="/webinar" className="px-2 py-2 text-gray-700  hover:text-green-500 ml-5">
                         Webinar
                     </Link>

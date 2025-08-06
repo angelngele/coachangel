@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import React from 'react';
+import Link from 'next/link'
 
 const services = [
     {
@@ -60,7 +61,7 @@ export default function ServicesPage() {
             </motion.h2>
 
             {/* Cards */}
-            <section className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+            <section className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto mb-5">
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
@@ -86,12 +87,20 @@ export default function ServicesPage() {
 
                         {/* Buttons */}
                         <div className="space-y-3 mt-auto">
-                            <button className="w-full bg-black text-white py-3 text-base rounded-full hover:opacity-90 transition">
-                                Know more
-                            </button>
-                            <button className="w-full bg-green-200 text-black py-3 text-base rounded-full hover:bg-green-300 transition">
-                                Schedule a Call
-                            </button>
+                            <Link
+                                href={"/webinar"} target="_blank"
+                                rel="noopener noreferrer">
+                                <button className="w-full bg-black text-white py-3 text-base rounded-full hover:opacity-90 transition">
+                                    Know more
+                                </button>
+                            </Link>
+                            <Link
+                                href="https://calendly.com/theangelngele" target="_blank"
+                                rel="noopener noreferrer">
+                                <button className="w-full mt-5 bg-green-200 text-black py-3 text-base rounded-full hover:bg-green-300 transition">
+                                    Schedule a Call
+                                </button>
+                            </Link>
                         </div>
                     </motion.div>
                 ))}
