@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import AnimatedButton from "./ui/AnimatedButton";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -21,8 +22,8 @@ export default function Navbar() {
             {/* Left: Name */}
             <div className="text-4xl font-bold">
                 <Link href="/">
-                    <span className="text-secondaryGreen">A</span>ngel
-                    <span className="text-darkGreen">e</span>
+                    <span className="text-[#59AC77]">A</span>ngel
+                    <span className="text-[#568F87]">e</span>
                 </Link>
             </div>
 
@@ -45,9 +46,14 @@ export default function Navbar() {
                     <Link
                         href="https://calendly.com/theangelngele" target="_blank"
                         rel="noopener noreferrer"
-                        className="px-9 pt-2 pb-3 text-white border border-black bg-black rounded-full block transition-all duration-1000 ease-in-out hover:bg-green-200 hover:text-black hover:border-green-200"
+                        className=""
                     >
-                        Schedule a Call
+                        <AnimatedButton className="group relative flex items-center justify-center w-full sm:w-[220px] px-6 py-2 rounded-full border border-black bg-black text-white text-lg transition-all duration-500 ease-in-out   hover:border-green-200 overflow-hidden">
+                            {/* Text */}
+                            <span className="transition-all duration-500 transform group-hover:-translate-x-10">
+                                Schedule a Call
+                            </span>
+                        </AnimatedButton>
                     </Link>
                 </div>
             </div>

@@ -2,6 +2,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link'
+import Image from 'next/image'
+import AnimatedButton from './ui/AnimatedButton';
+
+
+const features = [
+    {
+        title: 'Public Speaking',
+        description:
+            'Master impactful communication and captivate any audience with confidence.',
+        icon: '/icons/Public_Speaking-removebg-preview.png',
+        bg: 'bg-green-200',
+    },
+    {
+        title: 'Career Growth',
+        description:
+            'Accelerate your success with strategies to thrive and advance in any industry.',
+        icon: '/icons/Growth-removebg-preview.png',
+        bg: 'bg-green-300',
+    },
+    {
+        title: 'Leadership',
+        description:
+            'Unlock your potential to lead with vision, authenticity, and influence.',
+        icon: '/icons/Leadership-removebg-preview.png',
+        bg: 'bg-green-400',
+    },
+];
 
 export default function HeroSection() {
     return (
@@ -18,10 +45,10 @@ export default function HeroSection() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 30, damping: 15 }}
-                className="flex flex-col items-center mb-16 mx-6 lg:mx-28"
+                className="flex flex-col items-center mb-10 lg:mx-28"
             >
                 <div className="text-center mt-5 font-medium">
-                    <p className="text-3xl sm:text-5xl leading-tight px-4 sm:px-40">
+                    <p className="text-3xl sm:text-5xl">
                         Empowering growth, resilience, and impactful leadership.
                     </p>
                 </div>
@@ -32,72 +59,80 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10"
+                className="min-w-[350px] mx-auto flex flex-col lg:flex-row items-center gap-20"
             >
                 {/* Text Section */}
-                <div className="flex-1 self-stretch flex flex-col justify-center pr-6 md:pr-12 lg:pr-28">
-                    <div className="text-gray-700 space-y-10 text-lg md:text-xl leading-relaxed">
-                        <p >
+                <div className="flex-1 flex flex-col justify-center -mx-10 sm:-mx-10 -px-14 sm:-px-14">
+                    <div className="text-gray-700 space-y-10 text-lg md:text-xl leading-relaxed mx-10 sm:mx-0">
+                        <p className='mr-3 sm:mr-36'>
                             Elevate your team event with Angel&apos;s transformative workshops on leadership,
                             public speaking, and mindset. Inspire growth, ignite innovation, and empower
                             lasting resilience.
                         </p>
 
                         {/* Keynote Topics */}
-                        <div className="space-y-6">
-                            <div className="flex items-start space-x-4">
-                                <div className="w-4 h-4 bg-green-300 rounded-full mt-1" />
-                                <div>
-                                    <h4 className="font-semibold text-gray-900">Public Speaking</h4>
-                                    <p className="text-sm text-gray-600">Master impactful communication and captivate any audience with confidence.</p>
+                        <div className="">
+                            <p>KEYNOTE TOPICS -</p>
+                        </div>
+                        <div className="space-y-8">
+                            {features.map((item, index) => (
+                                <div key={index} className="flex items-start space-x-4">
+                                    {/* Icon with bg */}
+                                    <div
+                                        className={`w-14 h-10 flex items-center justify-center rounded-full}`}
+                                    >
+                                        <Image
+                                            src={item.icon}
+                                            alt={item.title}
+                                            width={500}
+                                            height={500}
+                                            className="object-contain h-200 w-1000"
+                                        />
+                                    </div>
+
+                                    {/* Text */}
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                                        <p className="text-bold text-gray-600">{item.description}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="flex items-start space-x-4">
-                                <div className="w-4 h-4 bg-green-300 rounded-full mt-1" />
-                                <div>
-                                    <h4 className="font-semibold text-gray-900">Career Growth</h4>
-                                    <p className="text-sm text-gray-600">Accelerate your success with strategies to thrive and advance in any industry.</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start space-x-4">
-                                <div className="w-4 h-4 bg-green-300 rounded-full mt-1" />
-                                <div>
-                                    <h4 className="font-semibold text-gray-900">Leadership</h4>
-                                    <p className="text-sm text-gray-600">Unlock your potential to lead with vision, authenticity, and influence.</p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="pt-6 flex flex-col sm:flex-row gap-4">
-                            <Link
-                                href="/contact"
-                            >
-                                <button className="bg-black text-white px-6 py-3 rounded-full text-sm hover:opacity-90">
+                        <div className="pt-6 flex flex-col items-center sm:flex-row sm:justify-start gap-4">
+                            <Link href="/contact">
+                                <AnimatedButton className="bg-black text-white px-14 py-3 rounded-full text-sm hover:opacity-90">
                                     Inquire Now
-                                </button>
+                                </AnimatedButton>
                             </Link>
-                            <Link href={"https://drive.google.com/file/d/1x6pu2mk98Xrad3pJhBFBxcVR_6xtwD1z/view?usp=drive_link"} target="_blank" rel="noopener noreferrer">
-                                <button className="bg-green-200 text-black px-6 py-3 rounded-full text-sm hover:bg-green-300">
+                            <Link
+                                href="https://drive.google.com/file/d/1x6pu2mk98Xrad3pJhBFBxcVR_6xtwD1z/view?usp=drive_link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <AnimatedButton className="bg-green-200 text-black px-14 py-3 rounded-full text-sm hover:bg-green-300">
                                     Speaker Profile
-                                </button>
+                                </AnimatedButton>
                             </Link>
                         </div>
+
                     </div>
                 </div>
 
                 {/* Video Section */}
-                <div className="flex-1 flex justify-center">
-                    <div className="relative w-full max-w-[1000px] h-[500px] rounded-xl overflow-hidden shadow-md">
+                <div className="video-wrapper">
+                    <div className="rounded-xl h-140 overflow-hidden shadow-md">
                         <video
                             src="/assets/AngelVideo.mp4"
                             muted
                             autoPlay
                             loop
                             playsInline
-                            className="w-full h-full object-cover"
+                            className="video-el"
                         />
                     </div>
+
                 </div>
             </motion.section>
         </main >

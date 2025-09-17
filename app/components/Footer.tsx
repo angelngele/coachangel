@@ -8,7 +8,9 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row w-full justify-between items-center">
                 {/* Logo/Name */}
                 <div className="text-3xl md:text-4xl font-bold text-center md:text-left pl-0 md:pl-20">
-                    Angele
+                    <Link href={'/'}>
+                        Angele
+                    </Link>
                 </div>
 
                 {/* Links */}
@@ -33,10 +35,9 @@ export default function Footer() {
 
             {/* Divider */}
             <hr className="border-t-2 border-gray-600 w-full my-6" />
-
             {/* Copyright */}
             <div className="text-sm text-center">
-                © 2024 {"-"} Angele
+                © {new Date().getFullYear()} Angele
             </div>
         </footer>
     );
