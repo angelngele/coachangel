@@ -15,7 +15,7 @@ export default function Attendees() {
     const x = useTransform(scrollYProgress, [0, 1], ["30%", "-30%"]);
 
     return (
-        <main ref={containerRef}>
+        <main ref={containerRef} className="min-h-screen w-full">
             <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -27,16 +27,18 @@ export default function Attendees() {
                 </div>
             </motion.div>
 
-            <div className="flex justify-center items-center -mt-11 text-center font-normal">
-                <p>
+            <div className="flex justify-center items-center -mt-6 text-center font-normal px-5">
+                <p >
                     <span>Angel&#39;s webinars deliver real impact. Here&#39;s what attendees have </span>
                     <span className="block">to say about their experience</span>
                 </p>
             </div>
 
+
+
             {/* Testimonials */}
-            <div className="relative overflow-hidden mt-10">
-                <motion.div style={{ x }} className="flex gap-10">
+            <div className="relative overflow-hidden mt-10 mb-20 ">
+                <motion.div style={{ x }} className="flex gap-10 pb-10">
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
@@ -56,7 +58,7 @@ export default function Attendees() {
                             <hr className="border-t border-black mb-5" />
 
                             {/* Person's Image, Name, and Title */}
-                            <div className="flex items-center gap-4 mt-1 -mb-10">
+                            <div className="flex items-center gap-4 mt-1">
                                 <Image
                                     width={500}
                                     height={500}

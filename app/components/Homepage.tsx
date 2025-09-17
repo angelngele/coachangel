@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import AnimatedButton from './ui/AnimatedButton';
 
 export default function Home() {
     return (
@@ -12,7 +13,7 @@ export default function Home() {
                 <h1 className="text-4xl md:text-6xl font-bold leading-wider tracking-tighter">
                     Your Guide to Personal Growth and <span className="relative inline-block">
                         <span className="z-10 relative">Lasting</span>
-                        <svg className="absolute -bottom-2 left-0 w-full h-4 z-0" viewBox="0 0 200 20">
+                        <svg className="absolute -bottom-3 left-0 w-full h-5 z-0" viewBox="0 0 200 30" preserveAspectRatio="none">
                             <path d="M0,15 Q50,0 100,15 T200,15" fill="none" stroke="#3ecf8e" strokeWidth="5" />
                         </svg>
                     </span> Change.
@@ -45,16 +46,16 @@ export default function Home() {
                     <Link
                         href="#services"
                     >
-                        <button className="w-full sm:w-auto bg-black text-white px-6 py-3 rounded-full text-lg">
+                        <AnimatedButton className="bg-black text-white px-14 rounded-full text-lg">
                             View Services
-                        </button>
+                        </AnimatedButton>
                     </Link>
                     <Link
                         href={"https://calendly.com/theangelngele"} target="_blank"
                         rel="noopener noreferrer">
-                        <button className="w-full sm:w-auto bg-green-200 text-green-800 px-6 py-3 rounded-full text-lg">
+                        <AnimatedButton className="w-full sm:w-auto bg-green-200 text-green-800 px-14 py-3 rounded-full text-lg">
                             Schedule a Call
-                        </button>
+                        </AnimatedButton>
                     </Link>
                 </div>
             </div>

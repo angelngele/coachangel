@@ -2,6 +2,7 @@ export const runtime = 'edge';
 
 import { NextResponse } from 'next/server';
 
+
 export async function POST(req: Request) {
     try {
         const { email } = await req.json();
@@ -10,8 +11,8 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Email is required' }, { status: 400 });
         }
 
-        const API_KEY = '1ac5b33efd5594eddbdc1ed0e8d591d1-us12';
-        const LIST_ID = 'a72630b20e';
+        const API_KEY = process.env.API_Mail_KEY!;
+        const LIST_ID = process.env.API_Mail_Secret!;
         const DATACENTER = API_KEY.split('-')[1];
 
         const url = `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}/members`;

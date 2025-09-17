@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Loader2, CheckCircle2, XCircle } from "lucide-react";
 import Image from "next/image";
+import Button from "./ui/Button";
 
 export default function NewsLetter() {
     const [email, setEmail] = useState("");
@@ -108,13 +109,13 @@ export default function NewsLetter() {
                             placeholder="name@email.com"
                             className="w-full p-2 px-5 rounded-full bg-transparent border-2 border-gray-300 focus:outline-none py-3"
                         />
-                        <button
+                        <Button
                             className={`w-full bg-green-200 text-black py-2 px-5 rounded-full transition-all duration-1000 ease-in-out hover:bg-black hover:text-green-200 hover:border-green-200 text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
                             onClick={handleSubscribe}
                             disabled={loading}
                         >
                             {loading ? <Loader2 className="animate-spin" /> : "Subscribe to Newsletter"}
-                        </button>
+                        </Button>
                     </div>
                 </div>
 
@@ -125,7 +126,7 @@ export default function NewsLetter() {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+                    className="fixed inset-0 flex items-center justify-center bg-green-300 bg-opacity-50"
                 >
                     <motion.div
                         initial={{ scale: 0.5, opacity: 0 }}
@@ -147,7 +148,8 @@ export default function NewsLetter() {
                                 <p className="text-gray-600">Stay tuned for insights and updates.</p>
                             </motion.div>
                         ) : (
-                            <motion.div className="flex flex-col items-center justify-center text-center">
+                            <motion.div className="flex flex-col items-center justify-center text-center"
+                                transition={{ repeat: Infinity, duration: 1 }}>
                                 <XCircle className="text-red-500 w-12 h-12 mb-4" />
                                 <p className="text-xl text-red-500 font-semibold">
                                     Oops! Something went wrong.

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
+import Button from './ui/Button';
 
 export default function About() {
     return (
@@ -74,19 +75,16 @@ export default function About() {
                         <Link
                             href={"/about"} target="_blank"
                             rel="noopener noreferrer">
-                            <button className="group relative bg-black text-white px-10 py-2 md:px-10 rounded-full text-lg overflow-hidden flex items-center justify-center transition-all duration-500 w-full sm:w-[200px] sm:hover:w-[280px]">
-
-                                {/* Text: centered by default, slides and stays on the left */}
-                                <span className="transition-all duration-500 transform group-hover:-translate-x-[90px]">
-                                    Know More
-                                </span>
-
-                                {/* Arrow: appears from the right */}
-                                <span className="absolute right-6 opacity-0 translate-x-10 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
-                                    →
-                                </span>
-
-                            </button>
+                            <Button className="group relative flex items-center justify-center w-full sm:w-[220px] px-6 py-2 rounded-full border border-black bg-black text-white text-lg transition-all duration-500 ease-in-out   hover:border-green-200 overflow-hidden">
+                            {/* Text */}
+                            <span className="transition-all duration-500 transform group-hover:-translate-x-10">
+                                Know more
+                            </span>
+                            {/* Arrow */}
+                            <span className="absolute right-6 opacity-0 translate-x-3 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+                                →
+                            </span>
+                        </Button>
                         </Link>
                     </div>
 

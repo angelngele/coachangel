@@ -1,11 +1,15 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import React from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import Image from 'next/image';
+import Button from './ui/Button';
 
 const services = [
     {
         title: 'Public Speaking',
+        icon: '/icons/Public_Speaking-removebg-preview.png', // make sure this file exists in /public/icons
         points: [
             'Build confidence on stage.',
             'Craft impactful presentations.',
@@ -16,6 +20,7 @@ const services = [
     },
     {
         title: 'Leadership Development',
+        icon: '/icons/Leadership-removebg-preview.png',
         points: [
             'Develop key leadership skills.',
             'Motivate and empower teams.',
@@ -26,6 +31,7 @@ const services = [
     },
     {
         title: 'Career Growth Coaching',
+        icon: '/icons/Growth-removebg-preview.png',
         points: [
             'Define clear career goals.',
             'Strengthen your personal brand.',
@@ -70,8 +76,16 @@ export default function ServicesPage() {
                         transition={{ delay: index * 0.2 }}
                         className="bg-green-50 rounded-3xl p-8 flex flex-col justify-between shadow-md hover:shadow-lg transition-shadow duration-300"
                     >
-                        {/* Icon placeholder */}
-                        <div className="w-10 h-10 rounded-xl bg-green-200 mb-4" />
+                        {/* Icon */}
+                        <div className="w-12 h-12 mb-4 flex items-center justify-center">
+                            <Image
+                                src={service.icon}
+                                alt={service.title}
+                                width={50}
+                                height={50}
+                                className="object-contain"
+                            />
+                        </div>
 
                         {/* Title */}
                         <h3 className="text-xl font-semibold mb-4 text-gray-900">
@@ -88,20 +102,36 @@ export default function ServicesPage() {
                         {/* Buttons */}
                         <div className="space-y-3 mt-auto">
                             <Link
-                                href={"/webinar"} target="_blank"
-                                rel="noopener noreferrer">
-                                <button className="w-full bg-black text-white py-3 text-base rounded-full hover:opacity-90 transition">
-                                    Know more
-                                </button>
+                                href="/webinar"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button className="group relative flex items-center justify-center px-6 w-full bg-black text-white py-3 text-base rounded-full transition-all duration-500 ease-in-out hover:bg-gray-900 hover:cursor-pointer">
+                                    <span className="transition-all duration-500 transform group-hover:-translate-x-10">
+                                        Know more
+                                    </span>
+                                    <span className="absolute right-6 opacity-0 translate-x-3 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+                                        →
+                                    </span>
+                                </Button>
                             </Link>
+
                             <Link
-                                href="https://calendly.com/theangelngele" target="_blank"
-                                rel="noopener noreferrer">
-                                <button className="w-full mt-5 bg-green-200 text-black py-3 text-base rounded-full hover:bg-green-300 transition">
-                                    Schedule a Call
-                                </button>
+                                href="https://calendly.com/theangelngele"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button className="group relative flex items-center justify-center px-6 w-full mt-5 bg-green-200 text-black py-3 text-base rounded-full transition-all duration-500 ease-in-out hover:bg-green-300 hover:cursor-pointer">
+                                    <span className="transition-all duration-500 transform group-hover:-translate-x-10">
+                                        Schedule a Call
+                                    </span>
+                                    <span className="absolute right-6 opacity-0 translate-x-3 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+                                        →
+                                    </span>
+                                </Button>
                             </Link>
                         </div>
+
                     </motion.div>
                 ))}
             </section>
