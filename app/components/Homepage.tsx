@@ -70,7 +70,7 @@ export default function Home() {
                     className="rounded-xl mx-auto"
                 />
 
-                <div className="space-y-4 absolute top-64 left-0 -translate-x-1/4 -translate-y-6 mt-10 md:mt-40 px-4 md:px-0">
+                <div className="space-y-4 absolute top-64 left-0 -translate-x-1/4 -translate-y-6 -mt-14 md:mt-40 px-0 md:px-0">
                     {[
                         { src: '/images/YourGrowth.png', alt: 'Your Growth' },
                         { src: '/images/helpingYouRedefine.png', alt: 'Helping Redefine Success' },

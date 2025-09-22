@@ -28,7 +28,7 @@ export default function Attendees() {
             </motion.div>
 
             <div className="flex justify-center items-center -mt-6 text-center font-normal px-5">
-                <p >
+                <p className="text-2xl">
                     <span>Angel&#39;s webinars deliver real impact. Here&#39;s what attendees have </span>
                     <span className="block">to say about their experience</span>
                 </p>

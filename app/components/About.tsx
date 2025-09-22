@@ -47,7 +47,7 @@ export default function About() {
                         />
                         <div className="absolute top-2 right-2 w-20 h-24 md:w-28 md:h-32">
                             <Image
-                                src="/Coach Angel_files/top10.jpg"
+                                src="/Coach Angel_files/Top100.png"
                                 alt="Top 10 Badge"
                                 fill
                                 className="object-contain"
