@@ -77,12 +77,12 @@ export default function ServicesPage() {
                         className="bg-green-50 rounded-3xl p-8 flex flex-col justify-between shadow-md hover:shadow-lg transition-shadow duration-300"
                     >
                         {/* Icon */}
-                        <div className="w-12 h-12 mb-4 flex items-center justify-center">
+                        <div className="w-20 h-20 mb-4 flex items-center justify-center">
                             <Image
                                 src={service.icon}
                                 alt={service.title}
-                                width={50}
-                                height={50}
+                                width={500}
+                                height={500}
                                 className="object-contain"
                             />
                         </div>

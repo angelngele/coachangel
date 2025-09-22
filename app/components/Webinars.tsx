@@ -47,7 +47,7 @@ export default function HeroSection() {
                 transition={{ type: "spring", stiffness: 30, damping: 15 }}
                 className="flex flex-col items-center mb-10 lg:mx-28"
             >
-                <div className="text-center mt-5 font-medium">
+                <div className="text-center mt-5 font-medium mx-5">
                     <p className="text-3xl sm:text-5xl">
                         Empowering growth, resilience, and impactful leadership.
                     </p>
@@ -64,35 +64,35 @@ export default function HeroSection() {
                 {/* Text Section */}
                 <div className="flex-1 flex flex-col justify-center -mx-10 sm:-mx-10 -px-14 sm:-px-14">
                     <div className="text-gray-700 space-y-10 text-lg md:text-xl leading-relaxed mx-10 sm:mx-0">
-                        <p className='mr-3 sm:mr-36'>
+                        <p className='mx-5 sm:mr-36'>
                             Elevate your team event with Angel&apos;s transformative workshops on leadership,
                             public speaking, and mindset. Inspire growth, ignite innovation, and empower
                             lasting resilience.
                         </p>
 
                         {/* Keynote Topics */}
-                        <div className="">
-                            <p>KEYNOTE TOPICS -</p>
+                        <div className="mx-5">
+                            <p className="pb-0 lg:pb-10">KEYNOTE TOPICS -</p>
                         </div>
                         <div className="space-y-8">
                             {features.map((item, index) => (
-                                <div key={index} className="flex items-start space-x-4">
+                                <div key={index} className="flex items-start space-x-4 mx-3">
                                     {/* Icon with bg */}
                                     <div
-                                        className={`w-14 h-10 flex items-center justify-center rounded-full}`}
+                                        className={`w-[100px] h-10 mt-2 flex items-center justify-center rounded-full}`}
                                     >
                                         <Image
                                             src={item.icon}
                                             alt={item.title}
                                             width={500}
                                             height={500}
-                                            className="object-contain h-200 w-1000"
+                                            className="object-contain h-200 w-3000"
                                         />
                                     </div>
 
                                     {/* Text */}
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                                    <div className='my-0 lg:my-2'>
+                                        <h4 className="font-semibold text-gray-900 mt-0 md:-mt-5">{item.title}</h4>
                                         <p className="text-bold text-gray-600">{item.description}</p>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="pt-6 flex flex-col items-center sm:flex-row sm:justify-start gap-4">
+                        <div className="pt-6 flex flex-col items-center sm:flex-row sm:justify-start gap-4 mx-8">
                             <Link href="/contact">
                                 <AnimatedButton className="bg-black text-white px-14 py-3 rounded-full text-sm hover:opacity-90">
                                     Inquire Now
