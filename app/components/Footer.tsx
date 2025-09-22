@@ -26,7 +26,7 @@ export default function Footer() {
 
                     <Link
                         href="mailto:coachangel@angelngele.com"
-                        className="hover:text-green-400 transition-colors"
+                        className="hover:text-green-500 transition-colors"
                     >
                         coachangel@angelngele.com
                     </Link>
