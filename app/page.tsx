@@ -7,7 +7,7 @@ import ServicesPage from "./components/Services";
 import Webinars from "./components/Webinars";
 
 import Attendees from "./components/Attendees";
-import Video from "./components/Video";
+// import Video from "./components/Video";
 
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
       </section>
       <Webinars />
       <Attendees />
-      <Video />
+      {/* <Video /> */}
       <NewsLetter />
     </main>
   );
