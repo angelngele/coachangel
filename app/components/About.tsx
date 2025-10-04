@@ -36,25 +36,26 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 className="mt-12 max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-10 px-4 md:px-8"
             >
-                {/* Image + Badge */}
-                <div className="flex-1 flex justify-center w-full">
-                    <div className="relative w-full max-w-[500px] aspect-square">
+                {/* Image*/}
+                <div className="relative w-full max-w-[400px] h-[650px]">
+                    <Image
+                        src="/Coach Angel_files/AboutMe.png"
+                        alt="Coach Angel"
+                        fill
+                        className="object-cover rounded-xl"
+                    />
+                    {/* + Badge */}
+                    <div className="absolute top-2 right-2 w-20 h-24 md:w-28 md:h-32">
                         <Image
-                            src="/Coach Angel_files/AboutMe.png"
-                            alt="Coach Angel"
+                            src="/Coach Angel_files/top10bg.png"
+                            alt="Top 10 Badge"
                             fill
-                            className="object-cover rounded-xl"
+                            className="object-contain"
                         />
-                        <div className="absolute top-2 right-2 w-20 h-24 md:w-28 md:h-32">
-                            <Image
-                                src="/Coach Angel_files/Top100.png"
-                                alt="Top 10 Badge"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
                     </div>
                 </div>
+
+
 
                 {/* Bio */}
                 <div className="flex-1 w-full flex flex-col justify-center px-0 md:pl-8 lg:pl-12">
@@ -76,15 +77,15 @@ export default function About() {
                             href={"/about"} target="_blank"
                             rel="noopener noreferrer">
                             <Button className="group relative flex items-center justify-center w-full sm:w-[220px] px-6 py-2 rounded-full border border-black bg-black text-white text-lg transition-all duration-500 ease-in-out   hover:border-green-200 overflow-hidden">
-                            {/* Text */}
-                            <span className="transition-all duration-500 transform group-hover:-translate-x-10">
-                                Know more
-                            </span>
-                            {/* Arrow */}
-                            <span className="absolute right-6 opacity-0 translate-x-3 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
-                                →
-                            </span>
-                        </Button>
+                                {/* Text */}
+                                <span className="transition-all duration-500 transform group-hover:-translate-x-10">
+                                    Know more
+                                </span>
+                                {/* Arrow */}
+                                <span className="absolute right-6 opacity-0 translate-x-3 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+                                    →
+                                </span>
+                            </Button>
                         </Link>
                     </div>
 
