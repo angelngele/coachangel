@@ -121,8 +121,8 @@ export default function HeroSection() {
                 </div>
 
                 {/* Video Section */}
-                <div className="video-wrapper">
-                    <div className="rounded-xl h-140 overflow-hidden shadow-md">
+                <div className="video-wrapper mt-0 sm:mt-44">
+                    <div className="rounded-xl h-140 scroll overflow-hidden shadow-md">
                         <video
                             src="/assets/video/AngelVideo.mp4"
                             muted
