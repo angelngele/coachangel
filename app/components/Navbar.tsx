@@ -27,7 +27,7 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            <div className="hidden lg:flex grow justify-center gap-8">
+            <div className="hidden lg:flex grow justify-center gap-8 items-center">
                 {/* Center: Links (for Desktop) */}
                 <div className="hidden lg:flex grow justify-center gap-8">
                     <Link href="/webinar" className="px-2 py-2 text-gray-700  hover:text-green-500 ml-5">
@@ -39,7 +39,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Right: Call Button */}
-                <div className="hidden lg:flex">
+                <div className="hidden lg:flex justify-center items-center">
                     <Link href="/contact" className="px-2 py-2 text-gray-700  hover:text-green-500 mr-5">
                         Contact Me
                     </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
                         rel="noopener noreferrer"
                         className=""
                     >
-                        <AnimatedButton className="group relative flex items-center justify-center w-full sm:w-[220px] px-6 py-2 rounded-full border border-black bg-black text-white text-lg transition-all duration-500 ease-in-out   hover:border-green-200 overflow-hidden">
+                        <AnimatedButton className="group relative flex items-center justify-center w-full sm:w-[200px] px-6 py-2 rounded-full border border-black bg-black text-white text-lg transition-all duration-500 ease-in-out   hover:border-green-200 overflow-hidden">
                             {/* Text */}
                             <span className="transition-all duration-500 transform group-hover:-translate-x-10">
                                 Schedule a Call
