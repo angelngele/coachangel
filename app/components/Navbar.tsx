@@ -48,7 +48,7 @@ export default function Navbar() {
                         rel="noopener noreferrer"
                         className=""
                     >
-                        <AnimatedButton className="group relative flex items-center justify-center w-full sm:w-[200px] px-6 py-2 rounded-full border border-black bg-black text-white text-lg transition-all duration-500 ease-in-out   hover:border-green-200 overflow-hidden">
+                        <AnimatedButton className="group relative flex items-center justify-center w-full sm:w-[220px] rounded-full border border-black bg-black text-white text-lg transition-all duration-500 ease-in-out hover:border-green-200 overflow-hidden">
                             {/* Text */}
                             <span className="transition-all duration-500 transform group-hover:-translate-x-10">
                                 Schedule a Call
