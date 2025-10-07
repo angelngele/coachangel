@@ -13,7 +13,25 @@ html {
       white 100%
     ),
     radial-gradient(600px at bottom right, #22c55e 0%, white 50%, white 100%);
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* For Homepage Component */
+.custom-radial-bg {
+  background-image: radial-gradient(
+      600px at top left,
+      #22c55e 0%,
+      white 50%,
+      white 100%
+    ),
+    radial-gradient(600px at bottom right, #22c55e 0%, white 50%, white 100%);
   background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-size: 600px 600px, 600px 600px;
+}
   background-position: top left, bottom right;
   background-size: 600px 600px, 600px 600px;
 }
