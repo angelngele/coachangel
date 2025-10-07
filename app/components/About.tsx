@@ -49,7 +49,7 @@ export default function About() {
             className="object-cover rounded-xl"
           />
           {/* + Badge */}
-          <div className="absolute top-40 -right-[50px] sm:top-20 sm:-right-4 w-96 h-28 sm:w-20 sm:h-24 md:w-24 md:h-28 lg:w-28 lg:h-32">
+          <div className="absolute top-40 left-[10px] sm:top-20 sm:left-[500px] w-96 h-28 sm:w-20 sm:h-24 md:w-24 md:h-28 lg:w-28 lg:h-32">
             <Image
               src="/Coach Angel_files/top10bg.png"
               alt="Top 10 Badge"
