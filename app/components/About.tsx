@@ -36,7 +36,6 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 className="mt-12 max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-10 px-4 md:px-8"
             >
-<<<<<<< HEAD
                 {/* Image*/}
                 <div className="relative w-full max-w-[400px] h-[650px]">
                     <Image
@@ -58,28 +57,6 @@ export default function About() {
 
 
 
-=======
-                {/* Image + Badge */}
-                <div className="flex-1 flex justify-center w-full">
-                    <div className="relative w-full max-w-[500px] aspect-square">
-                        <Image
-                            src="/Coach Angel_files/AboutMe.png"
-                            alt="Coach Angel"
-                            fill
-                            className="object-cover rounded-xl"
-                        />
-                        <div className="absolute top-2 right-2 w-20 h-24 md:w-28 md:h-32">
-                            <Image
-                                src="/Coach Angel_files/Top100.png"
-                                alt="Top 10 Badge"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
-                </div>
-
->>>>>>> 17859f4bfccdf7e2f4af9ce974c456b03790ec1a
                 {/* Bio */}
                 <div className="flex-1 w-full flex flex-col justify-center px-0 md:pl-8 lg:pl-12">
                     <div className="text-gray-700 space-y-6 text-lg md:text-xl leading-relaxed">
@@ -100,7 +77,6 @@ export default function About() {
                             href={"/about"} target="_blank"
                             rel="noopener noreferrer">
                             <Button className="group relative flex items-center justify-center w-full sm:w-[220px] px-6 py-2 rounded-full border border-black bg-black text-white text-lg transition-all duration-500 ease-in-out   hover:border-green-200 overflow-hidden">
-<<<<<<< HEAD
                                 {/* Text */}
                                 <span className="transition-all duration-500 transform group-hover:-translate-x-10">
                                     Know more
@@ -110,17 +86,6 @@ export default function About() {
                                     →
                                 </span>
                             </Button>
-=======
-                            {/* Text */}
-                            <span className="transition-all duration-500 transform group-hover:-translate-x-10">
-                                Know more
-                            </span>
-                            {/* Arrow */}
-                            <span className="absolute right-6 opacity-0 translate-x-3 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
-                                →
-                            </span>
-                        </Button>
->>>>>>> 17859f4bfccdf7e2f4af9ce974c456b03790ec1a
                         </Link>
                     </div>
 
