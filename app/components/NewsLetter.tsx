@@ -91,26 +91,26 @@ export default function NewsLetter() {
                 </div>
 
                 {/* Text and Form Section */}
-                <div className="bg-green-100 rounded-3xl py-5 px-10 pb-10 w-full lg:max-w-3xl h-auto lg:h-[420px] max-w-full">
+                <div className="bg-green-100 rounded-3xl py-6 sm:py-8 px-5 sm:px-8 md:px-10 w-full lg:max-w-3xl h-auto max-w-full">
                     <div>
-                        <h1 className="text-xl lg:text-2xl font-semibold mb-2 pt-5 pb-2">
+                        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 pt-4 pb-2 leading-snug">
                             One newsletter, straight from me to you. Countless breakthroughs. Join now for expert insights and updates!
                         </h1>
-                        <p className="text-sm lg:text-base text-gray-700 mb-0">
+                        <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
                             Weekly tips and strategies to boost your confidence, refine your skills, and find balance. Your growth journey starts here, don&#39;t miss out!
                         </p>
                     </div>
 
-                    <div className="flex flex-col items-center sm:items-start space-y-3 pt-10 lg:pt-20">
+                    <div className="flex flex-col items-center sm:items-start space-y-3 pt-8 sm:pt-10 md:pt-14">
                         <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="name@email.com"
-                            className="w-full p-2 px-5 rounded-full bg-transparent border-2 border-gray-300 focus:outline-none py-3"
+                            className="w-full p-3 sm:p-4 px-5 rounded-full bg-transparent border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-300 text-sm sm:text-base"
                         />
                         <Button
-                            className={`w-full bg-green-200 text-black py-2 px-5 rounded-full transition-all duration-1000 ease-in-out hover:bg-black hover:text-green-200 hover:border-green-200 text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+                            className={`w-full bg-green-200 text-black py-3 px-6 rounded-full transition-all duration-700 ease-in-out hover:bg-black hover:text-green-200 hover:border-green-200 text-sm sm:text-base font-medium flex justify-center items-center space-x-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
                             onClick={handleSubscribe}
                             disabled={loading}
                         >
@@ -118,7 +118,6 @@ export default function NewsLetter() {
                         </Button>
                     </div>
                 </div>
-
             </div>
 
             {/* Popup Notification */}

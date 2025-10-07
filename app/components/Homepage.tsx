@@ -61,16 +61,16 @@ export default function Home() {
             </div>
 
             {/* Left-aligned Image Section */}
-            <div className="md:w-1/2 -mt-4 -pt-40 md:-mt-40 md:-pt-40 relative px-4 md:px-0">
+            <div className="flex md:w-1/2 -mt-4 -pt-40 md:-mt-40 md:-pt-40 relative px-4 md:px-0">
                 <Image
                     src="/images/angelbackground2.png"
                     alt="Angel"
-                    width={600}
+                    width={500}
                     height={100}
                     className="rounded-xl mx-auto"
                 />
 
-                <div className="space-y-4 absolute top-64 left-0 -translate-x-1/4 -translate-y-6 -mt-14 md:mt-40 px-0 md:px-0">
+                <div className="space-y-4 absolute top-64 md:top-48 left-4 sm:left-0 -translate-x-1/4 -translate-y-6 -mt-14 md:mt-40 px-0 md:px-0">
                     {[
                         { src: '/images/YourGrowth.png', alt: 'Your Growth' },
                         { src: '/images/helpingYouRedefine.png', alt: 'Helping Redefine Success' },
@@ -90,7 +90,6 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-
             </div>
         </main>
     );

@@ -277,3 +277,5 @@ input[type="checkbox"]:checked::before {
 .animate-spin-slow {
     animation: spin-slow 3s linear infinite;
 }
+
+
