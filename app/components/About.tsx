@@ -60,7 +60,7 @@ export default function About() {
         </div>
 
         {/* Bio */}
-        <div className="flex-1 w-full flex flex-col justify-center text-center lg:text-left">
+        <div className="flex-1 w-full flex flex-col justify-center text-left lg:text-left">
           <div className="text-gray-700 space-y-5 text-base sm:text-lg md:text-xl leading-relaxed">
             <p>
               Hi, I&apos;m Angel Ngele, a self-improvement strategist and career
