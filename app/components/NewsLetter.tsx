@@ -68,7 +68,7 @@ export default function NewsLetter() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 30, damping: 15 }}
-                className="newsletter-container flex flex-col items-center mb-16 mx-6 lg:mx-28"
+                className="flex justify-center flex-col items-center mb-16 mx-6 lg:mx-2"
             >
                 <div className="text-center mt-5 font-medium">
                     <p className="text-3xl sm:text-5xl newsletter-heading">
@@ -78,9 +78,9 @@ export default function NewsLetter() {
                 </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:-space-x-16 mx-6 lg:mx-40 mb-16">
+            <div className="flex flex-col md:flex-row md:space-x-0 mx-10 md:mx-4 mb-16 justify-center items-center">
                 {/* Image Section */}
-                <div className="p-2 mb-8 lg:mb-0 flex justify-center">
+                <div className="p-2 mb-8 lg:mb-0 flex">
                     <Image
                         src="/images/new (1).png"
                         width={600}
