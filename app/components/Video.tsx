@@ -7,7 +7,7 @@ export default function Video() {
             <div className="rounded-full flex justify-center">
                 <div className="rounded-xl w-full max-w-[1000px] aspect-video">
                     <video
-                        src=""
+                        src="/assets/video/Mainwebvideo.mp4"
                         autoPlay
                         muted
                         loop
