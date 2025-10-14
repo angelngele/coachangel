@@ -11,30 +11,23 @@ import Video from "./components/Video";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden custom-radial-bg">
+    <main className="overflow-hidden">
       {/* Main Content */}
-      <div className="flex justify-center items-center mt-40 px-5 md:mt-20 md:px-20">
+      <div className="flex justify-center items-center mt-40 px-5 md:mt-20 md:px-20 custom-radial-bg">
         <Homepage />
       </div>
       <div className="flex justify-center items-center mt-20 gap-2 px-5 md:mt-10 md:px-20">
         <LogoCarousel />
       </div>
-      <div className="flex justify-center items-center mt-20 px-5 md:mt-10 md:px-20">
-        <About />
-      </div>
+      <About />
       <ImpactPage />
       <section id="services" className="w-full">
         <ServicesPage />
       </section>
-      <div className="flex justify-center items-center mt-20 px-5 md:mt-10 md:px-8">
-        <Webinars />
-      </div>
+      <Webinars />
       <Attendees />
-      <div className="flex justify-center items-center mt-20 px-5 md:mt-10 md:px-8">
-        <Video />
-      </div>
-
-      <NewsLetter />
+      <Video />
+     <NewsLetter />
 
     </main>
   );
