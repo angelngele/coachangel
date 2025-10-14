@@ -6,7 +6,7 @@ import AnimatedButton from './ui/AnimatedButton';
 
 export default function Home() {
     return (
-        <main className="min-h-screen flex flex-col md:flex-row items-center justify-between px-0 md:px-0 py-12 gap-20 mt-10">
+        <main className="flex flex-col md:flex-row items-center justify-between  px-5 md:px-20 py-12 gap-20 mt-52 md:mt-44 ">
             {/* Left Side */}
             <div className="md:w-1/2 -mt-44 pt-5">
                 <p className="text-3xl font-medium text-green-700">Hi, I&apos;m Angel</p>

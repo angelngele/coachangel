@@ -11,9 +11,9 @@ import Video from "./components/Video";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden custom-radial-bg">
       {/* Main Content */}
-      <div className="flex justify-center items-center mt-40 px-5 md:mt-20 md:px-20 custom-radial-bg">
+      <div className="">
         <Homepage />
       </div>
       <div className="flex justify-center items-center mt-20 gap-2 px-5 md:mt-10 md:px-20">
@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <About />
       <ImpactPage />
-      <section id="services" className="w-full">
+      <section id="services">
         <ServicesPage />
       </section>
       <Webinars />

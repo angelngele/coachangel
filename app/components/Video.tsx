@@ -22,7 +22,7 @@ export default function Video() {
                         />
                     </div>
                 </div>
-                <div className='flex justify-center mt-6 py-4 mb-0 md:mb-10'>
+                <div className='flex justify-center mt-6 py-2 pb-4 md:py-4 md:pb-10'>
                     <Link
                         href={"/contact"}
                         target="_blank"
