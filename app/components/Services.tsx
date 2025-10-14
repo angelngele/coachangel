@@ -44,10 +44,10 @@ const services = [
 
 export default function ServicesPage() {
     return (
-        <main className="min-h-screen pt-44 px-6 md:px-10 bg-white">
+        <main className="pt-20 px-6 md:px-10 bg-white">
             {/* Section Badge */}
             <div className="text-center">
-                <span className="bg-green-100 text-xs md:text-sm font-semibold text-gray-600 px-5 py-2 rounded-full tracking-wide">
+                <span className="bg-green-100 text-xs md:text-sm font-semibold text-gray-600 px-5 py-2 rounded-full tracking-wider">
                     SERVICES
                 </span>
             </div>

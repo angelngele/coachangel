@@ -7,9 +7,9 @@ import Button from './ui/Button';
 
 export default function About() {
   return (
-    <main className="min-h-screen flex flex-col bg-white">
+    <main className="flex flex-col justify-center items-center bg-white">
       {/* Tagline */}
-      <div className="flex justify-center items-center tracking-wider mt-28 md:mt-32 lg:mt-36">
+      <div className="flex justify-center items-center tracking-wider mt-0 md:mt-20 mb-5 md:mb-10">
         <h1 className="bg-green-100 py-2 text-xs px-4 rounded-full font-medium text-gray-600">
           LITTLE ABOUT ME
         </h1>
@@ -33,15 +33,15 @@ export default function About() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
         className="
-          flex flex-col lg:flex-row
+          flex flex-col lg:flex-row justify-center
           items-center lg:items-start
-          gap-10 md:gap-20
-          px-4 sm:px-8 md:px-12 lg:px-20
+          gap-10 md:gap-5
+          px-4 md:px-32
           mb-20
         "
       >
         {/* Image (on top for mobile, left for desktop) */}
-        <div className="relative w-full max-w-[450px] sm:max-w-[500px] md:max-w-[600px] lg:w-[700px] h-[400px] sm:h-[550px] md:h-[650px] lg:h-[750px]">
+        <div className="relative w-full max-w-[450px] md:max-w-[700px] h-[400px] md:h-[700px]">
           <Image
             src="/Coach Angel_files/AboutMe.png"
             alt="Coach Angel"
@@ -49,7 +49,7 @@ export default function About() {
             className="object-cover rounded-xl"
           />
           {/* + Badge */}
-          <div className="absolute top-40 left-[10px] sm:top-20 sm:left-[500px] w-96 h-28 sm:w-20 sm:h-24 md:w-24 md:h-28 lg:w-28 lg:h-32">
+          <div className="absolute top-40 left-[28px] sm:top-20 sm:left-[500px] w-96 h-28 sm:w-20 sm:h-24 md:w-24 md:h-28 lg:w-28 lg:h-32">
             <Image
               src="/Coach Angel_files/top10bg.png"
               alt="Top 10 Badge"
@@ -61,7 +61,7 @@ export default function About() {
 
         {/* Bio */}
         <div className="flex-1 w-full flex flex-col justify-center text-left lg:text-left">
-          <div className="text-gray-700 space-y-5 text-base sm:text-lg md:text-xl leading-relaxed">
+          <div className="text-gray-700 space-y-5  text-lg md:text-xl leading-relaxed">
             <p>
               Hi, I&apos;m Angel Ngele, a self-improvement strategist and career
               coach passionate about helping individuals unlock clarity,
