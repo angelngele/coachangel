@@ -7,7 +7,7 @@ import Button from './ui/Button';
 
 export default function About() {
   return (
-    <main className="flex flex-col justify-center items-center bg-white">
+    <main className="flex flex-col justify-center items-center bg-white mt-20">
       {/* Tagline */}
       <div className="flex justify-center items-center tracking-wider mt-0 md:mt-20 mb-5 md:mb-10">
         <h1 className="bg-green-100 py-2 text-xs px-4 rounded-full font-medium text-gray-600">
