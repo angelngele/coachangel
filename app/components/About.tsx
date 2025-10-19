@@ -35,21 +35,24 @@ export default function About() {
         className="
           flex flex-col lg:flex-row justify-center
           items-center lg:items-start
-          gap-10 md:gap-5
+          gap-10 md:gap-5 sm:gap-5 lg:gap-5
+          w-full
           px-4 md:px-32
           mb-20
         "
       >
         {/* Image (on top for mobile, left for desktop) */}
-        <div className="relative w-full max-w-[450px] md:max-w-[700px] h-[400px] md:h-[700px]">
+        {/* Image + Badge Wrapper */}
+        <div className="relative w-full max-w-[450px] md:max-w-[700px] h-[400px] md:h-[700px] flex-shrink-0">
           <Image
             src="/Coach Angel_files/AboutMe.png"
             alt="Coach Angel"
             fill
             className="object-cover rounded-xl"
           />
-          {/* + Badge */}
-          <div className="absolute top-40 left-[28px] sm:top-20 sm:left-[500px] w-96 h-28 sm:w-20 sm:h-24 md:w-24 md:h-28 lg:w-28 lg:h-32">
+
+          {/* Badge */}
+          <div className="absolute top-42 right-20 md:top-14 md:right-4 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
             <Image
               src="/Coach Angel_files/top10bg.png"
               alt="Top 10 Badge"
@@ -59,9 +62,11 @@ export default function About() {
           </div>
         </div>
 
+
+
         {/* Bio */}
-        <div className="flex-1 w-full flex flex-col justify-center text-left lg:text-left">
-          <div className="text-gray-700 space-y-5  text-lg md:text-xl leading-relaxed">
+        <div className="flex-1 w-full flex flex-col justify-center items-center text-left lg:text-left h-[700px] sm:h-[500px] lg:h-[700px]">
+          <div className="text-gray-700 space-y-5 justify-center items-center text-lg md:text-xl leading-relaxed overflow-y-auto">
             <p>
               Hi, I&apos;m Angel Ngele, a self-improvement strategist and career
               coach passionate about helping individuals unlock clarity,
@@ -96,6 +101,7 @@ export default function About() {
               </Link>
             </p>
           </div>
+
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-8">
