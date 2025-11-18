@@ -43,20 +43,23 @@ export default function FirstSection() {
       </div>
 
       {/* Video Section */}
-      <div className="flex justify-center items-center mt-10 px-4 sm:px-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          width="640"
-          height="640"
-          className="rounded-3xl shadow-3xl"
-        >
-          <source src="/assets/AngelVideo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className="flex overflow-hidden scroll justify-center items-center mt-10 px-4 sm:px-0">
+        <div className="rounded-xl flex justify-center px-10 md:px-0 md:pt-20">
+          <div className="rounded-xl w-full max-w-[640px] overflow-hidden">
+            <video
+              src="/assets/AngelVideo.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="block w-full h-full rounded-3xl shadow-3xl object-cover"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </div>
+
 
       {/* Second Text Section */}
       <div className="flex items-center justify-center mt-6 sm:mt-14 text-xl font-medium text-center">

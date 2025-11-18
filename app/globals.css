@@ -267,15 +267,15 @@ input[type="checkbox"]:checked::before {
   transform: scale(1.03); /* tiny zoom to hide lines */
 }
 
-
-
 /* Optional: Add these to globals.css or Tailwind config if not present */
 @keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .animate-spin-slow {
-    animation: spin-slow 3s linear infinite;
+  animation: spin-slow 3s linear infinite;
 }
-
-

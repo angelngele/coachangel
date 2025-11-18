@@ -124,7 +124,7 @@ export default function HeroSection() {
                 <div className="video-wrapper mt-0 sm:mt-44">
                     <div className="rounded-xl h-140 scroll overflow-hidden shadow-md">
                         <video
-                            src="/assets/video/AngelVideo.mp4"
+                            src="/assets/AngelVideo.mp4"
                             muted
                             autoPlay
                             loop

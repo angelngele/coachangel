@@ -66,7 +66,7 @@ export default function About() {
 
         {/* Bio */}
         <div className="flex-1 w-full flex flex-col text-left lg:text-left h-[700px] sm:h-[500px] lg:h-[700px]">
-          <div className="text-gray-700 space-y-5 text-justify items-end text-lg md:text-xl px-0 md:px-4 leading-relaxed overflow-y-auto">
+          <div className="text-gray-700 space-y-5 items-end text-lg md:text-xl px-0 md:px-4 leading-relaxed overflow-y-auto">
             <p>
               Hi, I&apos;m Angel Ngele, a self-improvement strategist and career
               coach passionate about helping individuals unlock clarity,
