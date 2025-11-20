@@ -24,32 +24,48 @@ export default function Footer() {
             </div>
 
             {/* Social Icons */}
-            <div className="flex flex-wrap justify-center gap-5 md:gap-6 w-2xl md:w-auto md:max-w-none">
-                {socialLinks.map(({ icon, src, href, label }) => (
-                    <Link
-                        key={label}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 border hover:border-green-400 hover:scale-105 px-2 rounded-full hover:bg-green-400 duration-1000 transition-all ease-in-out"
-                        aria-label={label}
+            <div className="w-full flex justify-center md:justify-center md:items-center">
+                <div
+                    className="
+            grid grid-cols-2 gap-4
+            max-w-xs w-full
 
-                    >
-                        {icon ? (
-                            icon
-                        ) : (
-                            <Image
-                                src={src!}
-                                alt={label}
-                                width={26}
-                                height={26}
-                                className="object-contain" aria-label={label}
-                            />
-                        )}
-                        <span className="hidden md:inline">{label}</span>
-                    </Link>
-                ))}
+            md:flex md:justify-center md:flex-row md:flex-wrap md:gap-6 md:max-w-none
+        "
+                >
+                    {socialLinks.map(({ icon, src, href, label }) => (
+                        <Link
+                            key={label}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="
+                    flex items-center gap-2
+                    border px-2 py-1 rounded-full
+                    hover:border-green-400 hover:bg-green-400
+                    hover:scale-105 transition-all duration-500
+                    justify-center md:justify-start
+                "
+                            aria-label={label}
+                        >
+                            {icon ? (
+                                icon
+                            ) : (
+                                <Image
+                                    src={src!}
+                                    alt={label}
+                                    width={26}
+                                    height={26}
+                                    className="object-contain"
+                                />
+                            )}
+                            <span className="hidden md:inline">{label}</span>
+                        </Link>
+                    ))}
+                </div>
             </div>
+
+
 
             <hr className="border-t border-gray-600 w-full" />
 
