@@ -31,8 +31,9 @@ export default function Footer() {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 hover:text-green-400 transition-colors"
+                        className="flex items-center gap-2 border hover:border-green-400 hover:scale-105 px-2 rounded-full hover:bg-green-400 duration-1000 transition-all ease-in-out"
                         aria-label={label}
+
                     >
                         {icon ? (
                             icon
@@ -42,7 +43,7 @@ export default function Footer() {
                                 alt={label}
                                 width={26}
                                 height={26}
-                                className="object-contain"
+                                className="object-contain" aria-label={label}
                             />
                         )}
                         <span className="hidden md:inline">{label}</span>
@@ -55,6 +56,6 @@ export default function Footer() {
             <div className="text-sm text-center opacity-75">
                 © {new Date().getFullYear()} Angele
             </div>
-        </footer>
+        </footer >
     );
 }
