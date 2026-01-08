@@ -62,7 +62,7 @@ export default function ServicesPage() {
                 Ways in which I can{' '}
                 <span className="relative inline-block">
                     help you
-                    <span className="block h-[6px] bg-green-300 w-full absolute bottom-1 left-0 rounded-full z-[-1]" />
+                    <span className="block h-1.5 bg-green-300 w-full absolute bottom-1 left-0 rounded-full z-[-1]" />
                 </span>
             </motion.h2>
 

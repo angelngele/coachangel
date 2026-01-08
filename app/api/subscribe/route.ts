@@ -2,40 +2,140 @@ export const runtime = 'edge';
 
 import { NextResponse } from 'next/server';
 
-
 export async function POST(req: Request) {
     try {
         const { email } = await req.json();
 
-        if (!email) {
-            return NextResponse.json({ error: 'Email is required' }, { status: 400 });
+        if (!email || !email.includes('@')) {
+            return NextResponse.json(
+                { error: 'A valid email is required' },
+                { status: 400 }
+            );
         }
 
-        const API_KEY = process.env.API_Mail_KEY!;
-        const LIST_ID = process.env.API_Mail_Secret!;
-        const DATACENTER = API_KEY.split('-')[1];
+        const HUBSPOT_TOKEN = process.env.HUBSPOT_ACCESS_TOKEN;
 
-        const url = `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}/members`;
+        if (!HUBSPOT_TOKEN) {
+            return NextResponse.json(
+                { error: 'HubSpot token not configured' },
+                { status: 500 }
+            );
+        }
 
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Basic ${Buffer.from(`anystring:${API_KEY}`).toString('base64')}`,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email_address: email,
-                status: 'subscribed',
-            }),
-        });
+        const response = await fetch(
+            'https://api.hubapi.com/crm/v3/objects/contacts',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${HUBSPOT_TOKEN}`,
+                },
+                body: JSON.stringify({
+                    properties: { email },
+                }),
+            }
+        );
 
+        const data = await response.json();
+
+        // Contact already exists
         if (!response.ok) {
-            const errorData = await response.json();
-            return NextResponse.json({ error: errorData.detail }, { status: response.status });
+            if (data?.category === 'CONFLICT') {
+                return NextResponse.json(
+                    { message: 'You are already subscribed.' },
+                    { status: 200 }
+                );
+            }
+
+            return NextResponse.json(
+                { error: data?.message || 'Subscription failed' },
+                { status: response.status }
+            );
         }
 
         return NextResponse.json({ message: 'Subscription successful!' });
-    } catch (error) {
-        return NextResponse.json({error:error}, { status: 500 });
+    } catch {
+        return NextResponse.json(
+            { error: 'Server error. Please try again later.' },
+            { status: 500 }
+        );
     }
 }
+
+
+
+
+// export const runtime = 'edge';
+
+// import { NextResponse } from 'next/server';
+
+// export async function POST(req: Request) {
+//     try {
+//         const { email } = await req.json();
+
+//         if (!email || !email.includes('@')) {
+//             return NextResponse.json(
+//                 { error: 'A valid email is required' },
+//                 { status: 400 }
+//             );
+//         }
+
+//         const HUBSPOT_TOKEN = process.env.HUBSPOT_ACCESS_TOKEN;
+
+//         if (!HUBSPOT_TOKEN) {
+//             console.error('❌ Missing HUBSPOT_ACCESS_TOKEN');
+
+//             return NextResponse.json(
+//                 { error: 'HubSpot token not configured' },
+//                 { status: 500 }
+//             );
+//         }
+
+//         const response = await fetch(
+//             'https://api.hubapi.com/crm/v3/objects/contacts',
+//             {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                     Authorization: `Bearer ${HUBSPOT_TOKEN}`,
+//                 },
+//                 body: JSON.stringify({
+//                     properties: {
+//                         email
+//                     },
+//                 }),
+//             }
+//         );
+
+//         const data = await response.json();
+
+//         if (!response.ok) {
+//             console.error('❌ HubSpot API Error:', {
+//                 status: response.status,
+//                 response: data,
+//             });
+
+//             if (data?.category === 'CONFLICT') {
+//                 return NextResponse.json(
+//                     { message: 'You are already subscribed.' },
+//                     { status: 200 }
+//                 );
+//             }
+
+//             return NextResponse.json(
+//                 { error: data?.message || 'Subscription failed' },
+//                 { status: response.status }
+//             );
+//         }
+
+//         return NextResponse.json({ message: 'Subscription successful!' });
+
+//     } catch (err) {
+//         console.error('🔥 Server Error in /api/subscribe:', err);
+
+//         return NextResponse.json(
+//             { error: 'Server error. Please try again later.' },
+//             { status: 500 }
+//         );
+//     }
+// }

@@ -1,3 +1,5 @@
+"use client";
+
 import NewsLetter from "./components/NewsLetter";
 import Homepage from "./components/Homepage";
 import LogoCarousel from "./components/LogoCarousel";
@@ -7,9 +9,23 @@ import ServicesPage from "./components/Services";
 import Webinars from "./components/Webinars";
 import Attendees from "./components/Attendees";
 import Video from "./components/Video";
+import Modal from "./components/Modal";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
+  const [showNewsletter, setShowNewsletter] = useState(false);
+
+  useEffect(() => {
+    // Show popup when user first lands on home page
+    const hasSeenPopup = sessionStorage.getItem("newsletterPopupSeen");
+
+    if (!hasSeenPopup) {
+      setShowNewsletter(true);
+      sessionStorage.setItem("newsletterPopupSeen", "true");
+    }
+  }, []);
+
   return (
     <main className="overflow-hidden custom-radial-bg">
       {/* Main Content */}
@@ -27,7 +43,10 @@ export default function Home() {
       <Webinars />
       <Attendees />
       <Video />
-     <NewsLetter />
+      {/* Newsletter Popup */}
+      <Modal isOpen={showNewsletter} onClose={() => setShowNewsletter(false)}>
+        <NewsLetter />
+      </Modal>
 
     </main>
   );
