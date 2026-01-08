@@ -6,7 +6,7 @@ import AnimatedButton from './ui/AnimatedButton';
 
 export default function Home() {
     return (
-        <main className="flex flex-col md:flex-row items-center justify-between  px-5 md:px-20 py-12 gap-20 mt-52 md:mt-44 ">
+        <main className="flex flex-col md:flex-row items-center justify-between px-5 md:px-20 py-12 gap-20 mt-52 md:mt-44 ">
             {/* Left Side */}
             <div className="md:w-1/2 -mt-44 pt-5">
                 <p className="text-3xl font-medium text-green-700">Hi, I&apos;m Angel</p>
@@ -26,7 +26,7 @@ export default function Home() {
                 <div className="flex items-center space-x-0 pt-8">
                     <div className="flex -space-x-2">
                         {[1, 2, 3, 4].map(i => (
-                            <div key={i} className="relative w-[60px] h-[60px]">
+                            <div key={i} className="relative w-15 h-15">
                                 <Image
                                     src={`/avatars/avatar${i}.jpg`}
                                     alt={`Avatar ${i}`}

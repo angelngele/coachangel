@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
     try {
         const formData = await req.json();
-        console.log("Form data received:", formData);
+        // console.log("Form data received:", formData);
 
         // Use AbortController for timeout handling
         const controller = new AbortController();
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
                 errorMessage = await response.text();
             }
 
-            console.error("Backend error:", errorMessage);
+            // console.error("Backend error:", errorMessage);
             return NextResponse.json({ error: errorMessage }, { status: response.status });
         }
 
@@ -43,17 +43,17 @@ export async function POST(req: Request) {
             try {
                 return await response.json();
             } catch (err) {
-                console.warn("No JSON response from backend:", err);
+                // console.warn("No JSON response from backend:", err);
                 return {};
             }
         })();
 
-        console.log("Backend response:", data);
+        // console.log("Backend response:", data);
 
         return NextResponse.json({ message: "Registration successful!" }, { status: 200 });
 
     } catch (error) {
-        console.error("API route error:", error);
+        // console.error("API route error:", error);
 
         let errorMessage = "An unexpected error occurred. Please try again later.";
         if (error instanceof Error) {
