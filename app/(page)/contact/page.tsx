@@ -5,6 +5,7 @@ import FirstSectionDesktop from "./(sections)/FirstSectionDesktop";
 import FirstSectionMobile from "./(sections)/FirstSectionMobile";
 import Attendees from "../webinar/(sections)/Attendees";
 import NewsLetter from "../../components/NewsLetter";
+import Modal from "@/app/components/Modal";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null); // null initially to avoid mismatch
@@ -29,11 +30,26 @@ export default function Page() {
 
   if (isMobile === null) return null; // or a loader/spinner
 
+  const [showNewsletter, setShowNewsletter] = useState(false);
+
+  useEffect(() => {
+    // Show popup when user first lands on page
+    const hasSeenPopup = sessionStorage.getItem("newsletterPopupSeen");
+
+    if (!hasSeenPopup) {
+      setShowNewsletter(true);
+      sessionStorage.setItem("newsletterPopupSeen", "true");
+    }
+  }, []);
+
   return (
     <main>
       {isMobile ? <FirstSectionMobile /> : <FirstSectionDesktop />}
       <Attendees />
       <NewsLetter />
+      <Modal isOpen={showNewsletter} onClose={() => setShowNewsletter(false)}>
+        <NewsLetter />
+      </Modal>
     </main>
   );
 }
