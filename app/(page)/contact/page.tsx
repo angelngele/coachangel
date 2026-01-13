@@ -8,17 +8,16 @@ import NewsLetter from "../../components/NewsLetter";
 import Modal from "@/app/components/Modal";
 
 function useIsMobile() {
-  const [isMobile, setIsMobile] = useState<boolean | null>(null); // null initially to avoid mismatch
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 767px)");
-    const handleChange = (event: MediaQueryListEvent) => setIsMobile(event.matches);
+    const handleChange = (event: MediaQueryListEvent) =>
+      setIsMobile(event.matches);
 
-    // Set initial state
     setIsMobile(mediaQuery.matches);
-
-    // Listen for changes
     mediaQuery.addEventListener("change", handleChange);
+
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
@@ -26,14 +25,10 @@ function useIsMobile() {
 }
 
 export default function Page() {
+  const [showNewsletter, setShowNewsletter] = useState(false);
   const isMobile = useIsMobile();
 
-  if (isMobile === null) return null; // or a loader/spinner
-
-  const [showNewsletter, setShowNewsletter] = useState(false);
-
   useEffect(() => {
-    // Show popup when user first lands on page
     const hasSeenPopup = sessionStorage.getItem("newsletterPopupSeen");
 
     if (!hasSeenPopup) {
@@ -41,6 +36,9 @@ export default function Page() {
       sessionStorage.setItem("newsletterPopupSeen", "true");
     }
   }, []);
+
+  // ✅ Now the conditional return is AFTER all hooks
+  if (isMobile === null) return null;
 
   return (
     <main>
