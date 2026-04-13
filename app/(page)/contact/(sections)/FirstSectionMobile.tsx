@@ -29,7 +29,7 @@ export default function FirstSectionMobile() {
                 </p>
                 <button
                     onClick={() => setShowForm(true)}
-                    className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition"
+                    className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition hover:scale-105 transform hover:cursor-pointer"
                 >
                     Submit Quick Inquiry
                 </button>
