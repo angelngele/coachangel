@@ -1,18 +1,25 @@
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
-import { Linkedin, Instagram, Youtube, Facebook, Mail } from "lucide-react";
+import { LuFacebook, LuLinkedin, LuInstagram, LuYoutube, LuMail} from "react-icons/lu";
+import { FaThreads, FaTiktok, FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
     const socialLinks = [
-        { icon: <Linkedin size={22} />, href: "https://linkedin.com/in/theangelngele", label: "LinkedIn" },
-        { icon: <Instagram size={22} />, href: "https://www.instagram.com/theangelngele/", label: "Instagram" },
-        { src: "/threads.png", href: "https://www.threads.com/@theangelngele", label: "Threads" },
-        { src: "/tiktok-logo.png", href: " https://www.tiktok.com/@theangelngele", label: "TikTok" },
-        { src: "/X-logo.png", href: "https://x.com/theangelngele", label: "X" },
-        { icon: <Youtube size={22} />, href: "https://www.youtube.com/@theangelngele", label: "YouTube" },
-        { icon: <Facebook size={22} />, href: "https://www.facebook.com/coachangelngele", label: "Facebook" },
-        { icon: <Mail size={22} />, href: "mailto:coachangel@angelngele.com", label: "Email" },
+        // { icon: <Linkedin size={22} />, href: "https://linkedin.com/in/theangelngele", label: "LinkedIn" },
+        {icon: <LuLinkedin size={22} />, href: "https://www.linkedin.com/in/theangelngele/", label: "LinkedIn" },
+        // { icon: <Instagram size={22} />, href: "https://www.instagram.com/theangelngele/", label: "Instagram" },
+        {icon: <LuInstagram size={22} />, href: "https://www.instagram.com/theangelngele/", label: "Instagram" },
+        // { src: "/threads.png", href: "https://www.threads.com/@theangelngele", label: "Threads" },
+        {icon: <FaThreads size={22} />, href: "https://www.threads.com/@theangelngele", label: "Threads" },
+        // { src: "/tiktok-logo.png", href: " https://www.tiktok.com/@theangelngele", label: "TikTok" },
+        {icon: <FaTiktok size={22} />, href: " https://www.tiktok.com/@theangelngele", label: "TikTok" },
+        // { src: "/X-logo.png", href: "https://x.com/theangelngele", label: "X" },
+        {icon: <FaXTwitter size={22} />, href: "https://x.com/theangelngele", label: "X" },
+        // { icon: <YouTube size={22} />, href: "https://www.youtube.com/@theangelngele", label: "YouTube" },
+        {icon: <LuYoutube size={22} />, href: "https://www.youtube.com/@theangelngele", label: "YouTube" },
+        { icon: <LuFacebook size={22} />, href: "https://www.facebook.com/coachangelngele", label: "Facebook" },
+        // { icon: <Mail size={22} />, href: "mailto:coachangel@angelngele.com", label: "Email" },
+        {icon: <LuMail size={22} />, href: "mailto:coachangel@angelngele.com", label: "Email" }
     ];
 
     return (
@@ -33,7 +40,7 @@ export default function Footer() {
             md:flex md:justify-center md:flex-row md:flex-wrap md:gap-6 md:max-w-none
         "
                 >
-                    {socialLinks.map(({ icon, src, href, label }) => (
+                    {socialLinks.map(({ icon, href, label }) => (
                         <Link
                             key={label}
                             href={href}
@@ -52,7 +59,7 @@ export default function Footer() {
                                 icon
                             ) : (
                                 <Image
-                                    src={src!}
+                                    src={icon!}
                                     alt={label}
                                     width={26}
                                     height={26}
